@@ -1,0 +1,42 @@
+#summary Description of type conversion rules between Lua and !ActionScript.
+
+*TODO* Cover !ActionScript 3 types better.
+
+There are eight types in Lua:
+
+Simple ones:
+
+  * nil
+  * number
+  * string
+  * boolean
+
+Harder ones:
+
+  * table
+  * function
+  * thread
+  * userdata
+
+Note that threads in Lua are not OS threads, but coroutines --
+collaborative multithreading constructs. We probably do not need to
+allow Lua threads and userdata to be pass to AS (except maybe as a
+"black boxes" to be passed back to Lua functions). We may implement
+some AS3 types as userdata (class objects for example) -- but it would
+be easy to distinguish between "our" userdata and one that come, say,
+from another Lua C module.
+
+We probably would not be able to map table to AS3 well (due to its
+advanced features like metatables etc). For the sake of Lua to AS
+calls it could be easier to provide explicit convertors to each of
+relevant AS types
+
+Lua: {{{ AS3.table2{object,array,vector,dictionary,bytearray}() }}}
+
+It is probably best to avoid autoconversions here. OTOH conversion
+from the relevant AS type to table should go smoothly (but maybe it
+would be simple to use metatabled userdata instead, need to prototype
+a bit here). 
+
+*TODO* We should decide also if bytearray actually fits here --
+probably not.
