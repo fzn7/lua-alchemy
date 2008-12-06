@@ -79,7 +79,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
          local file = assert(io.open("storage://path/data.dat", "r+"))
          }}}
 
-         NOTE: Loading code from local storage seems to be silly and insecure. Probably we should disable it.
+         *NOTE:* Loading code from local storage seems to be silly and insecure. Probably we should disable it.
 
        * Files, uploaded by user with open/save file dialog (read for open/write for save).
 
@@ -89,8 +89,9 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
          local write_file = assert(io.open("save://", "w"))
          }}}
 
-         NOTE: I do not like this filename-less notation much. Any ideas?
-         TODO: There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
+         *NOTE:* I do not like this filename-less notation much. Any ideas?
+
+         *TODO:* There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
 
        * Files, located in the file system (read/write within sandbox limits; no limits in console mode).
 
