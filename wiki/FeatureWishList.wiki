@@ -112,16 +112,16 @@ The above proposal also affects these functions:
   * os.remove()
   * os.rename()
 
-=== To be checked ===
+=== System Functions ===
+
+We should check that these functions work correctly in sandboxed mode:
 
   * os.tmpname()
-  * os.clock()
+  * os.clock() -- precision
   * os.getenv() -- especially in the sandbox mode (it should be OK if it returns empty environment)
   * os.setlocale()
 
-=== Advanced System Functions ===
-
-These functions probably make sense only in console mode. We should check that they do not break anything in sandbox, and leave them be.
+Functions listed below probably make sense only in console mode. We should check that they do not break anything in sandbox, and leave them be.
 
   * os.execute()
   * os.exit()
