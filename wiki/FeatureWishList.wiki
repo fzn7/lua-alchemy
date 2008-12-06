@@ -38,10 +38,12 @@
 Pseudo code on Lua side (*TODO:* to be expanded)
 
 {{{
-   local AS3 = require("AS3") -- This probably should register global
-AS3 as well
-   local myobj = AS3.new("mx.controls.text") -- Separate import stage
-is probably not needed
+   -- This probably should register global AS3 as well
+   local AS3 = require("AS3") 
+
+   -- Separate import stage is probably not needed
+   local myobj = AS3.new("mx.controls.text") 
+
    myobj.text = "Hello, world!"
    myobj:setVisible(false)
 }}}
