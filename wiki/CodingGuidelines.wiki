@@ -4,6 +4,6 @@ Following these rules would lead to less conflicts on merge (not to say to clean
 
 1. Use spaces, no tabs. Perferably two spaces per indent. Never mix tabs with spaces in indentation.
 
-2. Use Unix line endings, not Windows. Never mix different line endings in a file
+2. Use Unix line endings, not Windows. Never mix different line endings in a file.
 
 3. Do trim trailing spaces on save.
