@@ -1,42 +1,66 @@
 #summary The list of desired features of Lua Alchemy project
 
+= Target platform =
+
+  * Lua 5.1.4, *unmodified*
+  * Flash *10*
+  * Flex is *not required* to use core functionality
+  * *No paid tools* (e.g. !FlexBuilder) should be required to use library, just the free *command-line SDK tools*.
+  * Library must be usable on *OS X 10.5+* and *Windows XP* (Vista support is not guaranteed). Support for *Linux* is likely. 
+
+= Extra features =
+
+  * Flex *data bindings* support is available as a feature, *optional* for end-user.
+
+= Lua Support =
+
+  * *Full* support for the *language*
+  * As much as possible of the *Core Lua Libraries* is to be supported. See below.
+  * 
+
+
+== Core Lua Libraries ==
+
+  *
+
+
 = Foreign Function Interface =
 
 == Lua being able to create arbitrary !ActionScript objects ==
 
 Lua:
-{{{ v = ActionScript::new("package.Class") }}}
+{{{ asobj = ActionScript::new("package.Class") }}}
 
-== Lua being able to call AS getter ==
-
-Lua:
-{{{ a = v.field }}}
-
-== Lua being able to call AS setter ==  
+== Lua being able to call !ActionScript getter ==
 
 Lua:
-{{{ v.field = a }}}
+{{{ a = asobj.field }}}
 
-== Lua being able to call AS funciton ==
+== Lua being able to call !ActionScript setter ==  
+
+Lua:
+{{{ asobj.field = a }}}
+
+== Lua being able to call !ActionScript funciton ==
 
 Lua:
 {{{ v.realFunctionName(param1, param2, ... paramN) }}}
 
-== Lua be able to set a Lua function as the event handler for AS event ==
+== Lua be able to set a Lua function as the event handler for !ActionScript event ==
 
 Lua:
 {{{ v.setCallback(function(...) print(...) end) }}}
 
-== AS call Lua functions ==
+== !ActionScript call Lua functions ==
 
 *TODO*
 
-== AS execute string as Lua script ==
+== !ActionScript execute string as Lua script ==
 
 *TODO*
 
-== AS able to use a Lua function as an AS function ==
+== !ActionScript able to use a Lua function as an !ActionScript function ==
 
-So callbacks and event handlers could be defined in Lua for AS.
+So callbacks and event handlers could be defined in Lua for AS!ActionScript
 
 *TODO*
