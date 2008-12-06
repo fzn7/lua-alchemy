@@ -7,12 +7,6 @@ This text is a source for the initial project documentation draft and is based o
 
 Comments are welcome.
 
-== See also ==
-
-  * InitialFileReleases
-  * FeatureWishList
-  * KnownProblems
-
 == Background ==
 
 Lua is a great dynamic programming language, Adobe Flash is a great universal platform for applications and Adobe Alchemy is the tool to bind them together.
@@ -43,3 +37,9 @@ We need *Lua Alchemy* to...
 == Development model ==
 
 *TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion.
+
+= See also =
+
+  * InitialFileReleases
+  * FeatureWishList
+  * KnownProblems
