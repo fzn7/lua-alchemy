@@ -49,7 +49,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
   * `require() and package.*` for Lua sources
   * `require() and package.*` for Lua C (or other language) shared library modules, compiled in Alchemy.
 
-*TODO: Alexander Gladysh, TBD:*
+*TODO: By Alexander Gladysh, TBD:*
 
     I propose to put "virtual file system" wrapper on the file (both code and data) access. VFS targets:
 
@@ -62,7 +62,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
         dofile("file.lua") -- same file as above
         }}}
 
-        Default prefix setting should support all of available options. Note from the Lua point of view AS3.io_set_default_prefix("path") is the same as os.exec("cd path").
+        Default prefix setting should support all of available options. Note from the Lua point of view AS3.io_set_default_prefix("path") is conceptually the same as os.exec("cd path").
          
        * Files, bundled into other SWFs (read-only; available SWFs added with special API function from Lua, C and/or !ActionScript). *TODO:* Ensure that no AS3 SWF load specifics would inhibit this.
 
