@@ -53,7 +53,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
 
     I propose to put "virtual file system" wrapper on the file (both code and data) access. VFS targets:
 
-       * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to allow easier import:
+       * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to ease porting of existing sources:
          
          {{{ 
         dofile("thisswf://path/file.lua") 
