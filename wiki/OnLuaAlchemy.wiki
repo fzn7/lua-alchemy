@@ -12,6 +12,7 @@ Comments are welcome.
 
   * InitialFileReleases
   * FeatureWishList
+  * KnownProblems
 
 == Background ==
 
@@ -27,12 +28,6 @@ We need Lua Alchemy to...
   * ...To reuse existing Lua code for the Flash-based utilities
   * ...To get a great cross-platform back-end (Flash) for (simpler) Lua-based games
   * ...To have fun with awesome new technology :-)
-
-= Problems =
-
-  * In Alchemy calls across C / !ActionScript boundary are slow.
-
-  * We've got Lua VM running inside !ActionScript VM. This is also slow. It should be possible to convert Lua bytecode to AS bytecode directly with the help of [http://code.google.com/p/llvm-lua/ llvm-lua]. But see [http://marc.info/?l=lua-l&m=122847990506358&w=2 this post]: currently Alchemy uses outdated version of LLVM (2.1), which is incompatible with one in llvm-lua (2.4). We should try to encourage Alchemy developers to upgrade.
 
 = Organization =
 
