@@ -1,4 +1,5 @@
 #summary A draft for initial project documentation
+#labels Featured
 
 = Introduction =
 
