@@ -1,0 +1,43 @@
+#summary Draft page on building Lua with Alchemy
+
+*TODO:* Verify this
+
+= Required software =
+
+  * *[http://www.adobe.com/products/flex/flexdownloads/index.html Adobe Flex3 SDK]*
+    Install it as described [http://opensource.adobe.com/wiki/display/flexsdk/Setup here]. Note links to detailed instructions at the bottom of the page.
+
+  * *[http://labs.adobe.com/downloads/alchemy.html Adobe Alchemy]*
+    Install it as described [http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Getting_Started here].
+
+  * *[http://www.lua.org/download.html Lua 5.1.4 Sources]*
+    Simply unpack it somewhere.
+
+= Build steps =
+
+  # Fire up you terminal (Cygwin shell if you're on Windows)
+
+  # Change current directory to where you've unpacked Lua sources
+  
+{{{ 
+    $ cd ~/lua-5.1.4 
+}}}
+
+  # Enable Alchemy tools
+
+{{{ 
+    $ alc-on 
+}}}
+
+  # Run make
+
+{{{ 
+    $ make generic 
+}}}
+
+  # That is it, Lua is compiled to Flash. Try it
+
+{{{ 
+    $ cd src
+    $ ./lua
+}}}
