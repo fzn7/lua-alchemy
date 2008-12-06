@@ -34,7 +34,7 @@ We need *Lua Alchemy* to...
 
 *TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion. Put it on LuaAlchemyDevelopmentModel page.
 
-See also: ContributorsGitWorkflow, MaintainersGitWorkflow.
+See also: ContributorsGitWorkflow, MaintainersGitWorkflow, GitTipsAndTricks, CodingGuidelines.
 
 = See also =
 
