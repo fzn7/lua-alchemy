@@ -29,6 +29,8 @@ Alchemy's "executables" aren't really executables, they are swfs in a shell scri
 
 As in [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 this] post. On featured wiki page.
 
+*TODO:* Do not forget to set environment variables according to the README file.
+
 *TODO:* Post a *diff* between the native and swf runs along with analysis.
 
 *TODO:* Also run with intrusive C tests ("testC" option, see README)
