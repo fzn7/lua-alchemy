@@ -49,7 +49,7 @@ Looks like we would have to redistribute unknown amounts of Alchemy and Flex. Th
 
 == 2. Benchmarks for the relevant Lua code ===
 
-Use [code from Lua test/ folder (as [http://lua-users.org/lists/lua-l/2008-08/msg00591.html in here]) and from the [http://shootout.alioth.debian.org/u32q/lua.php Shootout].
+Use [code from Lua test/ folder (as in [http://lua-users.org/lists/lua-l/2008-08/msg00591.html here]) and from the [http://shootout.alioth.debian.org/u32q/lua.php Shootout].
 
 Both code and the results so everyone would be able to reproduce them.
 
