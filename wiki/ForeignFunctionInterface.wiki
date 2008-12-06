@@ -58,6 +58,8 @@ Lua:
 
 == !ActionScript able to use a Lua function as an !ActionScript function ==
 
-So callbacks and event handlers could be defined in Lua for !ActionScript
+Callbacks and event handlers could be defined in Lua for !ActionScript
 
-*TODO*
+Note that one can not create a function at runtime in AS 3, but
+we may inherit our class from Function class so dynamically created
+object of that class could be used instead of function.
