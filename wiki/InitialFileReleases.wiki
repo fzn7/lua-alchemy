@@ -19,6 +19,11 @@ Alchemy's "executables" aren't really executables, they are swfs in a shell scri
 
 *TODO:* Lua's `make generic` omits some useful features like libreadline. We should try to tune our build to include them.
 
+*UPDATE:* From the Adobe Flex FAQ:
+
+*Q:* Can I include the Free Adobe Flex 3 SDK as part of my own application?
+
+*A:* Yes. The Free Adobe Flex 3 SDK provides a Java API that allows you to call the compiler directly from your code instead of needing to call the command-line tools. You may redistribute the Free Adobe Flex SDK with your application provided you have signed a free redistribution agreement (expected in March 2008).
 
 == 2. [http://www.inf.puc-rio.br/~roberto/lua/lua5.1-tests.tar.gz Official Lua Test Suite] run results ===
 
