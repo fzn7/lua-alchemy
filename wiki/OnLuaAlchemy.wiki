@@ -62,5 +62,4 @@ As in [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 this]
 == 4. Lua console GUI emulation ==
 
 This probably it is most spectacular thing we're able to pull out without
-implementing Lua to !ActionScript bridge. It is a nice demo anyway, and mentioned
-bridge may be integrated into it later.
+implementing Lua to !ActionScript bridge. Simply rewrite lua.c to be usable from AS side; no fancy tricks on this step. It is a nice demo anyway, and mentioned bridge may be integrated into it later.
