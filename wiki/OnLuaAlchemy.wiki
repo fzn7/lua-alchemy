@@ -18,7 +18,7 @@ Comments are welcome.
 
 Lua is a great dynamic programming language, Adobe Flash is a great universal platform for applications and Adobe Alchemy is the tool to bind them together.
 
-[!We should copy-paste some white-paper paragraphs on each technology here, along with proper links]
+*TODO:* We should copy-paste some white-paper paragraphs on each technology here, along with proper links
 
 == Motivation ==
 
