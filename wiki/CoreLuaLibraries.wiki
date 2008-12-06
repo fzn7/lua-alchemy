@@ -1,6 +1,9 @@
 #summary Description of planned Core Lua Libraries support in Lua Alchemy
 
-*NOTE:* Core Lua Library functionality, not mentioned here, should work just fine.
+= Introduction =
+
+  * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used; it is fine, since it likely would not work on Windows anyway). The information on this page is more related to the sandboxed GUI case.
+ * Core Lua Library functionality, not mentioned here, should work just fine.
 
 = Stream IO =
 
