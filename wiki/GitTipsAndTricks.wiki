@@ -1,0 +1,7 @@
+#summary Useful tips and tricks for Git version control
+
+1. Use `[http://www.kernel.org/pub/software/scm/git/docs/git-stash.html git stash]` to save your changes and get back to clean working copy.
+
+2. Enable `[http://www.kernel.org/pub/software/scm/git/docs/git-rerere.html git rerere]` to ease your merges.
+
+3. Put an empty .keepme file into an empty directory you want to commit to git.
