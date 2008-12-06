@@ -42,7 +42,61 @@
 
 === Modular sources ===
 
-*TODO*
+To allow comfortable reuse of existing Lua code with Lua Alchemy, we must support following functions:
+
+  * `loadfile()`
+  * `dofile()`
+  * `require() and package.*` for Lua sources
+  * `require() and package.*` for Lua C (or other language) shared library modules, compiled in Alchemy.
+
+*TODO: Alexander Gladysh, TBD:*
+
+    I propose to put "virtual file system" wrapper on the file (both code and data) access. VFS targets:
+
+       * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to allow easier import:
+         
+         {{{ 
+        dofile("thisswf://path/file.lua") 
+        local file = assert(io.open("thisswf://path/data.dat")
+        AS3.io_set_default_prefix("thisswf://path")
+        dofile("file.lua") -- same file as above
+        }}}
+
+        Default prefix setting should support all of available options. Note from the Lua point of view AS3.io_set_default_prefix("path") is the same as os.exec("cd path").
+         
+       * Files, bundled into other SWFs (read-only; available SWFs added with special API function from Lua, C and/or !ActionScript). *TODO:* Ensure that no AS3 SWF load specifics would inhibit this.
+
+         {{{ 
+         AS3.io_add_swf("swf-name", "URI")
+         dofile("swf://swf-name/path/file.lua") 
+         }}}
+
+       * Files, located on the local Flash storage.
+
+       * Files, uploaded by user with open/save file dialog
+
+       * Files, located in the file system.
+
+
+
+We should decide which level of file access we would provide to Lua
+both for code (require, dofile etc) and file access.
+
+From my limited knowledge of Flash I see at least these possibilities:
+
+-- Unlimited file system access (for local flash)
+-- Flash local storage access
+-- Files, compiled into swf itself
+-- Files, compiled into external swf
+
+We should either use some path naming convention (like some local://,
+swf:// etc. prefixes) to allow these access options or pick a default
+options for code (current swf?) and for files (local storage?) and
+implement the rest of them in a separate library.
+
+Also we should separately consider require()'ing C modules, built with
+Alchemy; both built-in into our swf and probably loaded from external
+swfs as well.
 
 == File IO ==
 
