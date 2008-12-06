@@ -29,7 +29,7 @@ We need Lua Alchemy to...
 
 = Organization =
 
-  * Main place for collaboration (file releases, wiki, issues): *[http://code.google.com/p/lua-alchemy/ GoogleProjects]*
+  * Main place for collaboration: *[http://code.google.com/p/lua-alchemy/ GoogleProjects]* (file releases, wiki, issues)
   * Main place for development: *[http://github.com/lua-alchemy/lua-alchemy/ GitHub]*
   * Developer's mailing list: *[http://groups.google.com/group/lua-alchemy-dev/ GoogleGroups]* (to be made open for public as soon as we're ready)
 
