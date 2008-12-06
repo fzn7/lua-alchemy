@@ -1,0 +1,36 @@
+#summary List of planned initial file releases for the Lua Alchemy project
+
+= Initial file releases =
+
+Mentioned items are more like tangents to the main project, but they may help to attract some attention.
+
+== 1. Alchemy's lua and luac executables for OS X and Windows (and maybe Linux) ==
+
+So interested people would be able to play with the tech without
+the need to setup whole build chain.
+
+*Problem*:
+
+Alchemy's "executables" aren't really executables, they are swfs in a shell script with the following to execute them:
+
+{{{ #!/Users/universalmind/code/alchemy-darwin-v0.4a/bin/swfbridge }}}
+
+Looks like we would have to redistribute unknown amounts of Alchemy and Flex. This needs some research. It may be easier to provide detailed step-by-step build instructions.
+
+
+== 2. Benchmarks for the relevant Lua code ===
+
+Use code from Lua test/ folder (as in [http://lua-users.org/lists/lua-l/2008-08/msg00591.html this] post ) and from the [http://shootout.alioth.debian.org/u32q/lua.php Shootout].
+
+Both code and the results so everyone would be able to reproduce them.
+
+
+== 3. Official [http://www.inf.puc-rio.br/~roberto/lua/lua5.1-tests.tar.gz Lua Test Suite] run results ===
+
+As in [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 this] post.
+
+
+== 4. Lua console GUI emulation ==
+
+This probably it is most spectacular thing we're able to pull out without
+implementing Lua to !ActionScript bridge. Simply rewrite lua.c to be usable from AS side; no fancy tricks on this step. It is a nice demo anyway, and mentioned bridge may be integrated into it later.
