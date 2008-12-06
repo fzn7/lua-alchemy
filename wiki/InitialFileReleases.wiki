@@ -33,7 +33,7 @@ As in [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 this]
 
 *TODO:* Post a *diff* between the native and swf runs along with analysis.
 
-*TODO:* Also run with intrusive C tests ("testC" option, see README)
+*TODO:* Also run with intrusive C tests ("testC" option, see README). Add some 'test' and 'test-more' targets to our makefile.
 
 == 3. Benchmarks for the relevant Lua code ===
 
