@@ -11,16 +11,7 @@ Comments are welcome.
 == See also ==
 
   * InitialFileReleases
-
-== Organization ==
-
-  * Main place for collaboration: *[http://code.google.com/p/lua-alchemy/ GoogleProjects]*
-  * Main place for development: *[http://github.com/lua-alchemy/lua-alchemy/ GitHub]*
-  * Developer's mailing list: *[http://groups.google.com/group/lua-alchemy-dev/ GoogleGroups]* (to be made open for public as soon as we're ready)
-
-=== Development model ===
-
-*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion.
+  * FeatureWishList
 
 == Background ==
 
@@ -43,45 +34,12 @@ We need Lua Alchemy to...
 
   * We've got Lua VM running inside !ActionScript VM. This is also slow. It should be possible to convert Lua bytecode to AS bytecode directly with the help of [http://code.google.com/p/llvm-lua/ llvm-lua]. But see [http://marc.info/?l=lua-l&m=122847990506358&w=2 this post]: currently Alchemy uses outdated version of LLVM (2.1), which is incompatible with one in llvm-lua (2.4). We should try to encourage Alchemy developers to upgrade.
 
-= Feature/wish list =
+= Organization =
 
-== Foreign Function Interface ==
+  * Main place for collaboration: *[http://code.google.com/p/lua-alchemy/ GoogleProjects]*
+  * Main place for development: *[http://github.com/lua-alchemy/lua-alchemy/ GitHub]*
+  * Developer's mailing list: *[http://groups.google.com/group/lua-alchemy-dev/ GoogleGroups]* (to be made open for public as soon as we're ready)
 
-=== Lua being able to create arbitrary !ActionScript objects ===
+== Development model ==
 
-Lua:
-{{{ v = ActionScript::new("package.Class") }}}
-
-=== Lua being able to call AS getter ===
-
-Lua:
-{{{ a = v.field }}}
-
-=== Lua being able to call AS setter ===  
-
-Lua:
-{{{ v.field = a }}}
-
-=== Lua being able to call AS funciton ===
-
-Lua:
-{{{ v.realFunctionName(param1, param2, ... paramN) }}}
-
-=== Lua be able to set a Lua function as the event handler for AS event ===
-
-Lua:
-{{{ v.setCallback(function(...) print(...) end) }}}
-
-=== AS call Lua functions ===
-
-*TODO*
-
-=== AS execute string as Lua script ===
-
-*TODO*
-
-=== AS able to use a Lua function as an AS function ===
-
-So callbacks and event handlers could be defined in Lua for AS.
-
-*TODO*
+*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion.
