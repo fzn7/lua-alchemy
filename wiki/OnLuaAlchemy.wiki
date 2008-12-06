@@ -1,11 +1,11 @@
 #summary A draft for initial project documentation
 #labels Featured
 
-= Introduction =
-
-This text is a source for the initial project documentation draft and is based on the results of private discussions between me and Robert. It is intended to be split to multiple documents when it would mature a bit.
+The contents of this wiki is the initial project documentation draft and is based on the results of private discussions between me and Robert.
 
 Comments are welcome.
+
+= Introduction =
 
 == Background ==
 
