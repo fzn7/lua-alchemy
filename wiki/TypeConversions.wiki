@@ -1,4 +1,4 @@
-#summary Description of type conversion rules between Lua and !ActionScript.
+#summary Description of type conversion rules between Lua and ActionScript.
 
 *TODO* Cover !ActionScript 3 types better.
 
