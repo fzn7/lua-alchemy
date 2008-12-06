@@ -11,7 +11,7 @@
 = Implementation languages =
 
   * *!ActionScript* 3
-  * ANSI *C* 89 (not C++, not C 99)
+  * ANSI *C* 89 (not C++, not C 99; preferably the "clean C" subset as in Lua -- to allow users to build library as C++ code)
   * *Lua* 5.1
 
 = Core features =
