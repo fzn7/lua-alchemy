@@ -4,6 +4,8 @@
 
 = Required software =
 
+  * *OS X* with XCode or *Windows XP* with Cygwin. Should also work on *Linux*.
+
   * *[http://www.adobe.com/products/flex/flexdownloads/index.html Adobe Flex3 SDK]*
     Install it as described [http://opensource.adobe.com/wiki/display/flexsdk/Setup here]. Note links to detailed instructions at the bottom of the page.
 
