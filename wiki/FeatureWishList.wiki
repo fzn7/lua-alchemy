@@ -11,10 +11,11 @@
 = Extra features =
 
   * Flex *data bindings* support is available as a feature, *optional* for end-user.
+  * A library to construct UI as simple as it can be done with MXML. Could be easily done with Lua-based Data Description Language. *TODO:* Elaborate on that.
 
 = Lua Support =
 
-  * *Full* support for the *language*
+  * Full support for the language.
 
 == Core Lua Libraries ==
 
