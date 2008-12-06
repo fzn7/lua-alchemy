@@ -95,7 +95,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
        * Files, located in the file system (read/write within sandbox limits; no limits in console mode).
 
          {{{ 
-         dofile("file://Users/home/username/myfile.lua")
+         dofile("file://Users/Me/myfile.lua")
          local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
          }}}
 
