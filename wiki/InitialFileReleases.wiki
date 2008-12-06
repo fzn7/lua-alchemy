@@ -15,7 +15,9 @@ Alchemy's "executables" aren't really executables, they are swfs in a shell scri
 
 {{{ #!/Users/universalmind/code/alchemy-darwin-v0.4a/bin/swfbridge }}}
 
-Looks like we would have to redistribute unknown amounts of Alchemy and Flex. This needs some research. It may be easier to provide detailed step-by-step build instructions.
+*TODO:* Looks like we would have to redistribute unknown amounts of Alchemy and Flex. This needs some research. It may be easier to provide detailed step-by-step build instructions.
+
+*TODO:* Lua's `make generic` omits some useful features like libreadline. We should try to tune our build to include them.
 
 
 == 2. Benchmarks for the relevant Lua code ===
