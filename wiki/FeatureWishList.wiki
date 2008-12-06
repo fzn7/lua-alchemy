@@ -10,7 +10,7 @@
 
 = Implementation languages =
 
-  * *ActionScript* 3
+  * *!ActionScript* 3
   * ANSI *C* 89 (not C++, not C 99)
   * *Lua* 5.1
 
@@ -18,7 +18,7 @@
 
   * A framework to ease integration of Lua into !ActionScript.
   * A layer for doing type conversions from Lua to !ActionScript and vice versa. See TypeConversion.
-  * As cross-boundary calls between !ActionScript and C are slow (and C<->Lua is fast), we must allow user to write his custom optimized C layer for his specific task, preferably using our low-level functionality like type-conversion. 
+  * As cross-boundary calls between !ActionScript and C are slow (and C/Lua is fast), we must allow user to write his custom optimized C layer for his specific task, preferably using our low-level functionality like type-conversion. 
 
 = Extra features =
 
