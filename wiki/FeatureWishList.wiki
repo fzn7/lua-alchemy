@@ -1,0 +1,40 @@
+= Foreign Function Interface =
+
+== Lua being able to create arbitrary !ActionScript objects ==
+
+Lua:
+{{{ v = ActionScript::new("package.Class") }}}
+
+== Lua being able to call AS getter ==
+
+Lua:
+{{{ a = v.field }}}
+
+== Lua being able to call AS setter ==  
+
+Lua:
+{{{ v.field = a }}}
+
+== Lua being able to call AS funciton ==
+
+Lua:
+{{{ v.realFunctionName(param1, param2, ... paramN) }}}
+
+== Lua be able to set a Lua function as the event handler for AS event ==
+
+Lua:
+{{{ v.setCallback(function(...) print(...) end) }}}
+
+== AS call Lua functions ==
+
+*TODO*
+
+== AS execute string as Lua script ==
+
+*TODO*
+
+== AS able to use a Lua function as an AS function ==
+
+So callbacks and event handlers could be defined in Lua for AS.
+
+*TODO*
