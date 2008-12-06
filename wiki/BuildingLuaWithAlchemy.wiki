@@ -1,8 +1,6 @@
 #summary Draft page on building Lua with Alchemy
 #labels Featured
 
-*TODO:* Verify this
-
 = Required software =
 
   * *OS X* with XCode or *Windows XP* with Cygwin. Should also work on *Linux*.
