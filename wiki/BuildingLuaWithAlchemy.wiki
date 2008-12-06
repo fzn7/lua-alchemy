@@ -17,27 +17,27 @@
 
 = Build steps =
 
-  # Fire up you terminal (Cygwin shell if you're on Windows)
+  1. Fire up you terminal (Cygwin shell if you're on Windows)
 
-  # Change current directory to where you've unpacked Lua sources
+  2. Change current directory to where you've unpacked Lua sources
   
 {{{ 
     $ cd ~/lua-5.1.4 
 }}}
 
-  # Enable Alchemy tools
+  3. Enable Alchemy tools
 
 {{{ 
     $ alc-on 
 }}}
 
-  # Run make
+  4. Run make
 
 {{{ 
     $ make generic 
 }}}
 
-  # That is it, Lua is compiled to Flash. Try it
+  5. That is it, Lua is compiled to Flash. Try it
 
 {{{ 
     $ cd src
