@@ -8,6 +8,18 @@
   * *No paid tools* (e.g. !FlexBuilder) should be required to use library, just the free *command-line SDK tools*.
   * Library must support on *OS X* 10.5+ and Windows *XP*. Support for *Linux* is likely. (Vista support is not guaranteed, but likely.)
 
+= Implementation languages =
+
+  * *ActionScript* 3
+  * ANSI *C* 89 (not C++, not C 99)
+  * *Lua* 5.1
+
+= Core features =
+
+  * A framework to ease integration of Lua into !ActionScript.
+  * A layer for doing type conversions from Lua to !ActionScript and vice versa. See TypeConversion.
+  * As cross-boundary calls between !ActionScript and C are slow (and C<->Lua is fast), we must allow user to write his custom optimized C layer for his specific task, preferably using our low-level functionality like type-conversion. 
+
 = Extra features =
 
   * Flex *data bindings* support is available as a feature, *optional* for end-user.
@@ -16,14 +28,16 @@
 = Lua Support =
 
   * Full support for the language.
+  * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used; it is fine, since it likely would not work on Windows anyway). So everything in this section is related to the GUI SWFs.
 
 == Core Lua Libraries ==
 
-  * As much as possible is to be supported.
-  * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used. It is fine, since it likely would not work on Windows.
-  * *Problem:* Flash sandbox inhibits file IO and working with system.
+  * As much of Core Libraries as possible is to be supported.
+  * *Problem:* Flash sandbox inhibits file IO and system operations.
 
 == Stream IO ==
+
+  * In native GUI apps using Lua it is common practice to overload `print()` to print to log (AS `trace` or a hidden log sprite in GUI), and to disable `io.stdin`. Output streams `io.stdout` and `io.stderr` are to be redirected to log or disabled as well.
 
 == Modular sources ==
 
