@@ -40,7 +40,7 @@
 
   * In native GUI apps using Lua it is common practice to overload `print()` to print to log (AS `trace` or a hidden log sprite in GUI), and to disable `io.stdin`. Output streams `io.stdout` and `io.stderr` are to be redirected to log or disabled as well. It is fine to follow this practice.
 
-=== Modular sources ===
+=== Modular sources and File IO ===
 
 To allow comfortable reuse of existing Lua code with Lua Alchemy, we must support following functions:
 
@@ -57,7 +57,7 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
          
          {{{ 
         dofile("thisswf://path/file.lua") 
-        local file = assert(io.open("thisswf://path/data.dat")
+        local file = assert(io.open("thisswf://path/data.dat", "r"))
         AS3.io_set_default_prefix("thisswf://path")
         dofile("file.lua") -- same file as above
         }}}
@@ -69,36 +69,41 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
          {{{ 
          AS3.io_add_swf("swf-name", "URI")
          dofile("swf://swf-name/path/file.lua") 
+         local file = assert(io.open("swf://swf-name/path/data.dat", "r"))
          }}}
 
-       * Files, located on the local Flash storage.
+       * Files, located on the local Flash storage (read/write).
 
-       * Files, uploaded by user with open/save file dialog
+         {{{ 
+         dofile("storage://path/file.lua")
+         local file = assert(io.open("storage://path/data.dat", "r+"))
+         }}}
 
-       * Files, located in the file system.
+         NOTE: Loading code from local storage seems to be silly and insecure. Probably we should disable it.
 
+       * Files, uploaded by user with open/save file dialog (read for open/write for save).
 
+         {{{ 
+         dofile("open://") -- A lua script runner
+         local read_file = assert(io.open("open://", "r"))
+         local write_file = assert(io.open("save://", "w"))
+         }}}
 
-We should decide which level of file access we would provide to Lua
-both for code (require, dofile etc) and file access.
+         NOTE: I do not like this filename-less notation much. Any ideas?
+         TODO: There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
 
-From my limited knowledge of Flash I see at least these possibilities:
+       * Files, located in the file system (read/write within sandbox limits; no limits in console mode).
 
--- Unlimited file system access (for local flash)
--- Flash local storage access
--- Files, compiled into swf itself
--- Files, compiled into external swf
-
-We should either use some path naming convention (like some local://,
-swf:// etc. prefixes) to allow these access options or pick a default
-options for code (current swf?) and for files (local storage?) and
-implement the rest of them in a separate library.
+         {{{ 
+         dofile("file://Users/home/username/myfile.lua")
+         local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
+         }}}
 
 Also we should separately consider require()'ing C modules, built with
 Alchemy; both built-in into our swf and probably loaded from external
 swfs as well.
 
-== File IO ==
+== System Library ==
 
 *TODO*
 
