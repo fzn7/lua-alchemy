@@ -32,7 +32,7 @@ We need *Lua Alchemy* to...
 
 == Development model ==
 
-*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion.
+*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion. Put it on LuaAlchemyDevelopmentModel page.
 
 See also: DetailedGitWorkflow.
 
