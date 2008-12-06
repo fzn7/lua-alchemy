@@ -6,7 +6,7 @@
   * Flash *10*
   * Flex is *not required* to use core functionality
   * *No paid tools* (e.g. !FlexBuilder) should be required to use library, just the free *command-line SDK tools*.
-  * Library must be usable on *OS X 10.5+* and *Windows XP* (Vista support is not guaranteed). Support for *Linux* is likely. 
+  * Library must support on *OS X* 10.5+ and Windows *XP*. Support for *Linux* is likely. (Vista support is not guaranteed, but likely.)
 
 = Extra features =
 
@@ -15,14 +15,18 @@
 = Lua Support =
 
   * *Full* support for the *language*
-  * As much as possible of the *Core Lua Libraries* is to be supported. See below.
-  * 
-
 
 == Core Lua Libraries ==
 
-  *
+  * As much as possible is to be supported.
+  * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used. It is fine, since it likely would not work on Windows.
+  * *Problem:* Flash sandbox inhibits file IO and working with system.
 
+== Stream IO ==
+
+== Modular sources ==
+
+== File IO ==
 
 = Foreign Function Interface =
 
