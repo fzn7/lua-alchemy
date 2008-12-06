@@ -25,7 +25,7 @@ We need Lua Alchemy to...
   * ...To use *run-time dynamic* programming language (Lua) within the Flash framework. 
   * ...To *reuse* existing Lua code for the Flash-based utilities
   * ...To get a *great cross-platform back-end* (Flash) for (simpler) Lua-based games
-  * ...To have fun with awesome new technology :-)
+  * ...To have fun with *awesome* new technology :-)
 
 = Organization =
 
