@@ -70,6 +70,6 @@ Lua:
 
 == !ActionScript able to use a Lua function as an !ActionScript function ==
 
-So callbacks and event handlers could be defined in Lua for AS!ActionScript
+So callbacks and event handlers could be defined in Lua for !ActionScript
 
 *TODO*
