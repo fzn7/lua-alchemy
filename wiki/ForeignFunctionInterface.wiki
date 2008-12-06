@@ -1,0 +1,63 @@
+#summary One-sentence summary of this page.
+
+See also: TypeConversions
+
+= Prototyping =
+
+*TODO:* to be expanded
+
+Pseudo code on Lua side 
+
+{{{
+   -- This probably should register global AS3 as well
+   local AS3 = require("AS3") 
+
+   -- Separate import stage is probably not needed
+   local myobj = AS3.new("mx.controls.text") 
+
+   myobj.text = "Hello, world!"
+   myobj:setVisible(false)
+}}}
+
+= Features =
+
+*TODO:* To be expanded
+
+== Lua being able to create arbitrary !ActionScript objects ==
+
+Lua:
+{{{ asobj = AS3.new("package.Class") }}}
+
+== Lua being able to call !ActionScript getter ==
+
+Lua:
+{{{ a = asobj.field }}}
+
+== Lua being able to call !ActionScript setter ==  
+
+Lua:
+{{{ asobj.field = a }}}
+
+== Lua being able to call !ActionScript funciton ==
+
+Lua:
+{{{ v.realFunctionName(param1, param2, ... paramN) }}}
+
+== Lua be able to set a Lua function as the event handler for !ActionScript event ==
+
+Lua:
+{{{ v.setCallback(function(...) print(...) end) }}}
+
+== !ActionScript call Lua functions ==
+
+*TODO*
+
+== !ActionScript execute string as Lua script ==
+
+*TODO*
+
+== !ActionScript able to use a Lua function as an !ActionScript function ==
+
+So callbacks and event handlers could be defined in Lua for !ActionScript
+
+*TODO*
