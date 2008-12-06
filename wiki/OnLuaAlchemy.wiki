@@ -1,5 +1,4 @@
 #summary A draft for initial project documentation
-#sidebar TableOfContents
 
 = Introduction =
 
@@ -32,6 +31,7 @@ We need Lua Alchemy to...
 
 = Initial file releases =
 
+Mentioned items are more like tangents to the main project, but they may help to attract some attention.
 
 == 1. Alchemy's lua and luac executables for OS X and Windows (and maybe Linux) ==
 
@@ -54,7 +54,13 @@ Use [code from Lua test/ folder (as [http://lua-users.org/lists/lua-l/2008-08/ms
 Both code and the results so everyone would be able to reproduce them.
 
 
-
 == 3. Official [http://www.inf.puc-rio.br/~roberto/lua/lua5.1-tests.tar.gz Lua Test Suite] run results ===
 
 [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 As in this post.]
+
+
+== 4. Lua console GUI emulation ==
+
+This probably it is most spectacular thing we're able to pull out without
+implementing Lua to !ActionScript bridge. It is a nice demo anyway, and mentioned
+bridge may be integrated into it later.
