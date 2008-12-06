@@ -103,9 +103,29 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
 
          Lua's `require()` does not separate shared library modules from the plain Lua modules. See [http://www.lua.org/manual/5.1/manual.html#pdf-require docs] on how it works. We should replace `package.loaders` contents with our functions which know about our VFS. Once we have that and have working `loadfile()`, all would have to do is implement `[http://www.lua.org/manual/5.1/manual.html#pdf-package.loadlib package.loadlib]` to load shared libraries -- this should be enough.
 
-== System Library ==
+The above proposal also affects these functions:
 
-*TODO*
+  * io.open()
+  * io.input()
+  * io.output()
+  * io.tmpfile()
+  * os.remove()
+  * os.rename()
+
+=== To be checked ===
+
+  * os.tmpname()
+  * os.clock()
+  * os.getenv() -- especially in the sandbox mode (it should be OK if it returns empty environment)
+  * os.setlocale()
+
+=== Advanced System Functions ===
+
+These functions probably make sense only in console mode. We should check that they do not break anything in sandbox, and leave them be.
+
+  * os.execute()
+  * os.exit()
+  * io.popen()
 
 = Foreign Function Interface =
 
