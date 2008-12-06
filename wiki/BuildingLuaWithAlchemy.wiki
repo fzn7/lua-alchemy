@@ -1,4 +1,5 @@
 #summary Draft page on building Lua with Alchemy
+#labels Featured
 
 *TODO:* Verify this
 
