@@ -1,10 +1,6 @@
 #summary A draft for initial project documentation
 #labels Featured
 
-The contents of this wiki is the initial project documentation draft and is based on the results of private discussions between me and Robert.
-
-Comments are welcome.
-
 = Introduction =
 
 == Background ==
