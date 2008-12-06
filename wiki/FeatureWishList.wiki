@@ -99,9 +99,9 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
          local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
          }}}
 
-Also we should separately consider require()'ing C modules, built with
-Alchemy; both built-in into our swf and probably loaded from external
-swfs as well.
+         === Lua Modules ===
+
+         Lua's `require()` does not separate shared library modules from the plain Lua modules. See [http://www.lua.org/manual/5.1/manual.html#pdf-require docs] on how it works. We should replace `package.loaders` contents with our functions which know about our VFS. Once we have that and have working `loadfile()`, all would have to do is implement `[http://www.lua.org/manual/5.1/manual.html#pdf-package.loadlib package.loadlib]` to load shared libraries -- this should be enough.
 
 == System Library ==
 
