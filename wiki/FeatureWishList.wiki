@@ -1,3 +1,5 @@
+#summary The list of desired features of Lua Alchemy project
+
 = Foreign Function Interface =
 
 == Lua being able to create arbitrary !ActionScript objects ==
