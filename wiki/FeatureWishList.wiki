@@ -29,17 +29,17 @@
 
   * Full support for the language.
   * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used; it is fine, since it likely would not work on Windows anyway). So everything in this section is related to the GUI SWFs.
+  * *Problem:* Flash sandbox inhibits file IO and system operations.
 
 == Core Lua Libraries ==
 
   * As much of Core Libraries as possible is to be supported.
-  * *Problem:* Flash sandbox inhibits file IO and system operations.
 
-== Stream IO ==
+=== Stream IO ===
 
   * In native GUI apps using Lua it is common practice to overload `print()` to print to log (AS `trace` or a hidden log sprite in GUI), and to disable `io.stdin`. Output streams `io.stdout` and `io.stderr` are to be redirected to log or disabled as well. It is fine to follow this practice.
 
-== Modular sources ==
+=== Modular sources ===
 
 == File IO ==
 
