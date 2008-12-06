@@ -4,8 +4,6 @@
 
 This text is a source for the initial project documentation draft and is based on the results of private discussions between me and Robert. It is intended to be split to multiple documents when it would mature a bit.
 
-Some parts are probably too silly and should be removed or rewritten.
-
 Comments are welcome.
 
 == See also ==
