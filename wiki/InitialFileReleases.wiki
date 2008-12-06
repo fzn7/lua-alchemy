@@ -20,7 +20,7 @@ Alchemy's "executables" aren't really executables, they are swfs in a shell scri
 *TODO:* Lua's `make generic` omits some useful features like libreadline. We should try to tune our build to include them.
 
 
-== 2. Official [http://www.inf.puc-rio.br/~roberto/lua/lua5.1-tests.tar.gz Lua Test Suite] run results ===
+== 2. [http://www.inf.puc-rio.br/~roberto/lua/lua5.1-tests.tar.gz Official Lua Test Suite] run results ===
 
 As in [http://groups.google.com/group/lua-alchemy-dev/msg/996ec28605346254 this] post. On featured wiki page.
 
