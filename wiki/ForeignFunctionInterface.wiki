@@ -43,18 +43,29 @@ Lua:
 Lua:
 {{{ v.realFunctionName(param1, param2, ... paramN) }}}
 
+== Lua being able to store values of unsupported !ActionScript types ==
+
+As black boxes to pass them back to !ActionScript (see TypeConversions).
+
 == Lua be able to set a Lua function as the event handler for !ActionScript event ==
 
 Lua:
 {{{ v.setCallback(function(...) print(...) end) }}}
 
-== !ActionScript call Lua functions ==
+== !ActionScript has access to Lua data ==
 
-*TODO*
+!ActionScript code should be able to manipulate Lua data in global environment, and wherever else our API would allow it (data, stored in Lua registry etc.)
+
+  * Call functions.
+  * Access/iterate table values by index without conversion to native data (conversion would not be desirable for some tables, say, for global environment).
+  * Store unsupported data types (see TypeConversions) as black boxes to pass back to Lua functions. Note this may trigger problems with garbage collection. We would have to make sure Lua knows we still hold reference to those values.
+
+*TODO:* What else?
+*TODO:* Examples
 
 == !ActionScript execute string as Lua script ==
 
-*TODO*
+*TODO:* Examples
 
 == !ActionScript able to use a Lua function as an !ActionScript function ==
 
@@ -63,3 +74,13 @@ Callbacks and event handlers could be defined in Lua for !ActionScript
 Note that one can not create a function at runtime in AS 3, but
 we may inherit our class from Function class so dynamically created
 object of that class could be used instead of function.
+
+*TODO:* Examples
+
+== !ActionScript may control Lua garbage collection ==
+
+Our API should expose [http://www.lua.org/manual/5.1/manual.html#lua_gc relevant methods] so it would be possible for !ActionScript to finely control the Lua garbage collector.
+
+This may be done well from Lua scripts (and by calling Lua collectgarbage()), but finer control may be required in corner cases or when third-party Lua script does not expose necessary controls.
+
+*TODO:* Examples
