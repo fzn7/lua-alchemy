@@ -39,3 +39,4 @@ We need *Lua Alchemy* to...
   * InitialFileReleases
   * FeatureWishList
   * KnownProblems
+  * RandomNotes
