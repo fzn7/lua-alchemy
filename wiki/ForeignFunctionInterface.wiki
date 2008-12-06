@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Preliminary draft of Foreign Function interface design in Lua Alchemy
 
 See also: TypeConversions
 
