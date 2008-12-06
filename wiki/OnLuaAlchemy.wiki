@@ -12,6 +12,16 @@ Comments are welcome.
 
   * InitialFileReleases
 
+== Organization ==
+
+  * Main place for collaboration: *[http://code.google.com/p/lua-alchemy/ GoogleProjects]*
+  * Main place for development: *[http://github.com/lua-alchemy/lua-alchemy/ GitHub]*
+  * Developer's mailing list: *[http://groups.google.com/group/lua-alchemy-dev/ GoogleGroups]* (to be made open for public as soon as we're ready)
+
+=== Development model ===
+
+*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion.
+
 == Background ==
 
 Lua is a great dynamic programming language, Adobe Flash is a great universal platform for applications and Adobe Alchemy is the tool to bind them together.
@@ -64,12 +74,14 @@ Lua:
 
 === AS call Lua functions ===
 
-TODO
+*TODO*
 
 === AS execute string as Lua script ===
 
-TODO
+*TODO*
 
 === AS able to use a Lua function as an AS function ===
 
 So callbacks and event handlers could be defined in Lua for AS.
+
+*TODO*
