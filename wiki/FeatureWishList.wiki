@@ -35,6 +35,18 @@
 
 = Foreign Function Interface =
 
+Pseudo code on Lua side (*TODO:* to be expanded)
+
+{{{
+   local AS3 = require("AS3") -- This probably should register global
+AS3 as well
+   local myobj = AS3.new("mx.controls.text") -- Separate import stage
+is probably not needed
+   myobj.text = "Hello, world!"
+   myobj:setVisible(false)
+}}}
+
+
 == Lua being able to create arbitrary !ActionScript objects ==
 
 Lua:
