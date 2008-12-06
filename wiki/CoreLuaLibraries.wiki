@@ -1,6 +1,6 @@
 #summary Description of planned Core Lua Libraries support in Lua Alchemy
 
-NOTE: Core Lua Library functionality, not mentioned here, should work just fine.
+*NOTE:* Core Lua Library functionality, not mentioned here, should work just fine.
 
 = Stream IO =
 
