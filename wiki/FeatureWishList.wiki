@@ -29,11 +29,13 @@
 = Lua Support =
 
   * Full support for the language.
+  * As much of Core Lua Library functionality as possible is to be supported. See CoreLuaLibraries.
   * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used; it is fine, since it likely would not work on Windows anyway). So everything in this section is related to the GUI SWFs.
   * *Problem:* Flash sandbox inhibits file IO and system operations.
-  * As much of Core Lua Library functionality as possible is to be supported. See CoreLuaLibraries.
 
 = Foreign Function Interface =
+
+See also: TypeConversions
 
 Pseudo code on Lua side (*TODO:* to be expanded)
 
@@ -47,7 +49,6 @@ Pseudo code on Lua side (*TODO:* to be expanded)
    myobj.text = "Hello, world!"
    myobj:setVisible(false)
 }}}
-
 
 == Lua being able to create arbitrary !ActionScript objects ==
 
