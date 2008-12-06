@@ -31,7 +31,7 @@
   * Full support for the language.
   * It seems that in the console executable, running locally, almost everything is supported (except `io.popen()` which is due to `generic` make target used; it is fine, since it likely would not work on Windows anyway). So everything in this section is related to the GUI SWFs.
   * *Problem:* Flash sandbox inhibits file IO and system operations.
-  * As much of Core Libraries as possible is to be supported. See CoreLuaLibraries.
+  * As much of Core Lua Library functionality as possible is to be supported. See CoreLuaLibraries.
 
 = Foreign Function Interface =
 
