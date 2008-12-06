@@ -38,7 +38,7 @@
 == Lua being able to create arbitrary !ActionScript objects ==
 
 Lua:
-{{{ asobj = ActionScript::new("package.Class") }}}
+{{{ asobj = AS3.new("package.Class") }}}
 
 == Lua being able to call !ActionScript getter ==
 
