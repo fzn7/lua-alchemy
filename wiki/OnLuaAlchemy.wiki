@@ -10,7 +10,7 @@ Comments are welcome.
 
 == See also ==
 
-* InitialFileReleases
+  * InitialFileReleases
 
 == Background ==
 
