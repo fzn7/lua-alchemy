@@ -1,3 +1,3 @@
 #summary A collection of random notes not yet incorporated into documentation
 
-   * We may speed up our embedded Lua applications by removing compilation stage and bundling compiled Lua bytecode instead of sources. Also removing compilator itself from the library could save some space. Compilation in Lua is blazingly fast, but since we're running inside a VM... Anyway, this should be optional mode, not the default one for Lua Alchemy.
+_(Currently empty.)_
