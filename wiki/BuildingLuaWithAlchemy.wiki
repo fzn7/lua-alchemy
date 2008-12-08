@@ -36,8 +36,7 @@
     $ make generic 
 }}}
 
-5. That is it, Lua is compiled to Flash. Try it
-
+5. That is it, Lua is compiled to Flash. Try it!
 {{{ 
     $ cd src
     $ ./lua
