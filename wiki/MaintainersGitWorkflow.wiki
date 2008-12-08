@@ -1,6 +1,6 @@
-#summary This page describes recommended Git workflow for the Lua Alchemy maintainers
+#summary Recommended Git workflow for the Lua Alchemy maintainers
 
-See also ContributorsGitWorkflow.
+See also ContributorsGitWorkflow, GitTipsAndTricks, CodingGuidelines.
 
 = How to merge contributed branch to master =
 
