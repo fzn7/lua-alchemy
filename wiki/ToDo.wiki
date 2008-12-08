@@ -1,0 +1,26 @@
+#summary A list of things to be done in Lua Alchemy project (in no particular order)
+
+See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
+
+= Documentation / Wiki =
+
+  * OnLuaAlchemy: Fill the background section with white-paper stuff on Lua, Flash and Alchemy.
+  * LuaAlchemyDevelopmentModel: Create a stub page to join OnLuaAlchemy, CodingGuidelines, ContributorsGitWorkflow, MaintainersGitWorkflow.
+
+= Design =
+
+  * TypeConversions: Describe type conversions as a two tables: Lua->!ActionScript and !ActionScript->Lua
+  * CoreLuaLibraries: Decide on the VFS proposal for files and code modules.
+  * ForeignFunctionInterface: Update the page to describe current state. Probably needs full rewrite.
+  * FeatureWishList: Add an initial prototype of UI construction library (MXML analogue in Lua).
+
+= InitialFileReleases =
+
+  * GUI Lua console emulator, embeddable in browser. (Goes to demo/ directory.) Try setSprite() stuff on lua.c code as a simplest solution. Compile with at least libreadline turned on!
+  * Decide on the distribution of the lua console executable, compiled with Alchemy. Probably it does not worth it.
+  * Add official test suite run targets (plain and testC mode) to the makefiles. Publish analysis of diffs of the test runs for native and Alchemy Lua builds. (along with results and instructions to reproduce them.)
+  * Add benchmark runner script (as a makefile target?). Publish analysis, results and steps to reproduce for native vs. Alchemy Lua builds.
+
+= Implementation =
+
+  * CoreLuaLibraries: Implement code module support and file IO support. (Waits for VFS proposal decision.)
