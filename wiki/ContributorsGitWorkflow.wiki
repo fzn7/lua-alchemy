@@ -1,7 +1,5 @@
 #summary Detailed Git workflow for Lua Alchemy contributors
 
-See also LuaAlchemyDevelopmentModel.
-
 = 0. Do not panic! =
 
 == Troubleshooting ==
@@ -102,4 +100,9 @@ Please pick yourself an unique short prefix to use with every branch (initials w
 
 Please post short notice to the [http://groups.google.com/group/lua-alchemy-dev Developers Mailing List] telling us you've pushed a feature.
 
-See also: MaintainersGitWorkflow
+= See also =
+
+  * LuaAlchemyDevelopmentModel
+  * CodingGuidelines.
+  * MaintainersGitWorkflow
+  * GitTipsAndTricks
