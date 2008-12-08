@@ -1,7 +1,5 @@
 #summary Recommended Git workflow for the Lua Alchemy maintainers
 
-See also ContributorsGitWorkflow, GitTipsAndTricks, CodingGuidelines.
-
 = How to merge contributed branch to master =
 
 == 1. Please check that the branch is in the good shape ==
@@ -64,3 +62,10 @@ If you're sure all would be fine, you may use a shortcut:
 {{{
   $ git push origin master
 }}}
+
+= See also =
+
+  * LuaAlchemyDevelopmentModel
+  * CodingGuidelines.
+  * ContributorsGitWorkflow
+  * GitTipsAndTricks
