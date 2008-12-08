@@ -3,6 +3,7 @@
 See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
 
 *TODO:* Add more!
+
 *TODO:* Move this to [http://code.google.com/p/lua-alchemy/issues/list Issues]?
 
 = Documentation / Wiki =
