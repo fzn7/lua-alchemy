@@ -1,12 +1,31 @@
 #summary The recommended way of coding Lua Alchemy
 
+= White spaces =
+
 Following these rules would lead to less conflicts on merge (not to say to cleaner code):
 
-1. Use spaces, no tabs. Perferably two spaces per indent. *Never* mix tabs with spaces in indentation on single line.
+1. Use spaces, no tabs. 
 
-2. Use Unix line endings (LF), not Windows (CRLF). *Never* mix different line endings in a file.
+Perferably two spaces per indent. *Never* mix tabs with spaces in indentation on single line.
 
-3. Do trim trailing spaces on save.
+2. Use Unix line endings (LF), not Windows (CRLF). 
+
+*Never* mix different line endings in a file.
+
+It is recommended to configure related Git options as follows:
+
+{{{
+  $ git config core.autocrlf input 
+  $ git config core.safecrlf auto
+}}}
+
+See [http://www.kernel.org/pub/software/scm/git/docs/git-config.html git config] docs for motivation.
+
+3. Do trim trailing spaces on save. 
+
+If you're on Eclipse, [http://andrei.gmxhome.de/anyedit/ AnyEdit tools plugin] could be helpful.
+
+= Git usage =
 
 When committing code to Git, you're encouraged to follow these guidelines:
 
