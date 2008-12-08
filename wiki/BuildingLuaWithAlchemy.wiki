@@ -1,4 +1,4 @@
-#summary Draft page on building Lua with Alchemy
+#summary How to build Lua with Adobe Alchemy
 #labels Featured
 
 = Required software =
