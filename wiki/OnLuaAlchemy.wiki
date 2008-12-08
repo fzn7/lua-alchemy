@@ -42,3 +42,4 @@ See also: ContributorsGitWorkflow, MaintainersGitWorkflow, GitTipsAndTricks, Cod
   * FeatureWishList
   * KnownProblems
   * RandomNotes
+  * RecommendedReading
