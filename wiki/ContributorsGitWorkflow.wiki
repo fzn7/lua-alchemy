@@ -1,6 +1,4 @@
-#summary This page describes detailed Git workflow for Lua Alchemy contributors
-
-*TODO:* Verify everything is correct
+#summary Detailed Git workflow for Lua Alchemy contributors
 
 See also LuaAlchemyDevelopmentModel.
 
