@@ -66,6 +66,6 @@ If you're sure all would be fine, you may use a shortcut:
 = See also =
 
   * LuaAlchemyDevelopmentModel
-  * CodingGuidelines.
+  * CodingGuidelines
   * ContributorsGitWorkflow
   * GitTipsAndTricks
