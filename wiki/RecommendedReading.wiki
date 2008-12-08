@@ -1,0 +1,22 @@
+#summary A collection of links to related resources
+
+= Lua =
+
+  * [http://lua.org/manual/5.1/ Lua 5.1 Reference Manual]
+  * [http://www.inf.puc-rio.br/~roberto/pil2/ Programming in Lua] First edition is available online, but it is recommended to read second one.
+  * [http://www.lua.org/lua-l.html Lua Mailing List]
+  * [http://lua-users.org/wiki/ Lua Users Wiki]
+
+If you want to get a grasp of why Lua is what it is, read these two:
+
+  * [http://www.tecgraf.puc-rio.br/~lhf/ftp/doc/jucs05.pdf The Implementation of Lua 5.0]
+  * [http://www.tecgraf.puc-rio.br/~lhf/ftp/doc/hopl.pdf The Evolution of Lua]
+
+Deep technical info on details of Lua VM:
+
+  * [http://luaforge.net/docman/view.php/83/98/ANoFrillsIntroToLua51VMInstructions.pdf A No Frills Intro to Lua 5.1 VM Instructions]
+
+= Adobe Alchemy =
+
+  * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler.pdf FlaCC (former name of Adobe Alchemy) presentation slides]
+  * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler_Hi.m4v FlaCC presentation video]
