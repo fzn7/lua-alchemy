@@ -2,6 +2,8 @@
 
 See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
 
+*TODO:* Add more!
+
 = Documentation / Wiki =
 
   * OnLuaAlchemy: Fill the background section with white-paper stuff on Lua, Flash and Alchemy.
@@ -20,7 +22,19 @@ See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
   * Decide on the distribution of the lua console executable, compiled with Alchemy. Probably it does not worth it.
   * Add official test suite run targets (plain and testC mode) to the makefiles. Publish analysis of diffs of the test runs for native and Alchemy Lua builds. (along with results and instructions to reproduce them.)
   * Add benchmark runner script (as a makefile target?). Publish analysis, results and steps to reproduce for native vs. Alchemy Lua builds.
+  * Run official test suite in sandboxed mode (add to Unit Tests).
 
 = Implementation =
 
+  * Roll out a Makefile or ant file to be able to build without Flex Builder.
   * CoreLuaLibraries: Implement code module support and file IO support. (Waits for VFS proposal decision.)
+  * TypeConversions: Implement Lua->!ActionScript and !ActionScript->Lua. (Waits for design decision)
+  * ForeignFunctionInterface: Implement generic FFI (Waits for design)
+  * CoreLuaLibraries: Check that Supported System Functions work correctly in sandboxed mode
+  * CoreLuaLibraries: Check that Unsupported System Functions do not break anything in sandboxed mode
+
+= Extra features =
+
+  * FeatureWishList: Implement Flex data bindings support.
+  * FeatureWishList: Implement no-compiler feature.
+  * KnownProblems: Investigate Alchemy + llvm-lua feature further.
