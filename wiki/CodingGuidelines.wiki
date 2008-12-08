@@ -1,8 +1,8 @@
 #summary The recommended way of coding Lua Alchemy
 
-= White spaces =
+= Whitespaces =
 
-Following these rules would lead to less conflicts on merge (not to say to cleaner code):
+Following these rules would lead to less conflicts on merge:
 
 1. Use spaces, no tabs. 
 
