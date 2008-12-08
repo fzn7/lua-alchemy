@@ -1,6 +1,8 @@
 #summary How to build Lua with Adobe Alchemy
 #labels Featured
 
+Note this page describes how to build vanilla Lua with Adobe Alchemy. It does not describe how to build our Lua Alchemy project. For that see BuildingLuaAlchemy.
+
 = Required software =
 
   * *OS X* with XCode or *Windows XP* with Cygwin. Should also work on *Linux*.
