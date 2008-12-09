@@ -23,7 +23,7 @@ Lua is a great dynamic programming language, Adobe Flash is a great universal pl
 
 === Adobe Alchemy ===
 
-    _With Alchemy, Web application developers can now reuse hundreds of millions of lines of existing open source C and C++ client or server-side code on the Flash Platform.  Alchemy brings the power of high performance C and C++ libraries to Web applications with minimal degradation on AVM2.  The C/C++ code is compiled to ActionScript 3.0 as a SWF or SWC that runs on Adobe Flash Player 10 or Adobe AIR 1.5._
+    _With Alchemy, Web application developers can now reuse hundreds of millions of lines of existing open source C and C++ client or server-side code on the Flash Platform.  Alchemy brings the power of high performance C and C++ libraries to Web applications with minimal degradation on AVM2.  The C/C++ code is compiled to !ActionScript 3.0 as a SWF or SWC that runs on Adobe Flash Player 10 or Adobe AIR 1.5._
    
     -- http://labs.adobe.com/technologies/alchemy/
 
