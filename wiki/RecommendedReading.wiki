@@ -20,3 +20,8 @@ Deep technical info on details of Lua VM:
 
   * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler.pdf FlaCC (former name of Adobe Alchemy) presentation slides]
   * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler_Hi.m4v FlaCC presentation video]
+
+= ActionScript =
+
+  * [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000047.html Data type descriptions]
+  * [http://en.wikipedia.org/wiki/ActionScript#Data_types Wikipedia on AS3 types]
