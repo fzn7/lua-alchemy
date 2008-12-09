@@ -1,4 +1,5 @@
 #summary A list of things to be done in Lua Alchemy project (in no particular order)
+#labels Featured
 
 See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
 
