@@ -9,3 +9,5 @@
     The common solution is to use a third party library to deal with Unicode.
 
     Please read this: http://lua-users.org/wiki/LuaUnicode
+
+  * Arrays in Lua are one-based, and in !ActionScript are zero-based. This would inevitably lead to problems.
