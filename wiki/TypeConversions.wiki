@@ -1,4 +1,4 @@
-#summary Description of type conversion rules between Lua and ActionScript.
+#summary Type conversion rules between Lua and ActionScript.
 
 = Introduction =
 
@@ -64,14 +64,16 @@ case, as there are things you can do with each type.
    * Array -> userdata, convertible to table
    * Vector -> userdata, convertible to table
    * Dictionary -> userdata, convertible to table
-   * ByteArray -> userdata, convertible to table and to string
+   * !ByteArray -> userdata, convertible to table and to string
    * Function -> userdata with __call metamethod (as3.new("Function")(args))
 
    * Error -> ???
 
-   * MovieClip, Bitmap, Shape, TextField, SimpleButton, Date, RegExp,
+   * !MovieClip, Bitmap, Shape, !TextField, !SimpleButton, Date, !RegExp,
 Video, XML, XMLList -> the same kind of userdata as for any other
 "user-supplied" AS3 class.
+
+See also: [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000047.html Data type descriptions] and [http://en.wikipedia.org/wiki/ActionScript#Data_types Wikipedia on AS3 types].
 
 = Lua -> !ActionScript =
 
