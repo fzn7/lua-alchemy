@@ -9,7 +9,7 @@ See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
 
 = Documentation / Wiki =
 
-  * OnLuaAlchemy: Fill the background section with white-paper stuff on Lua, Flash and Alchemy.
+  * ~~OnLuaAlchemy: Fill the background section with white-paper stuff on Lua, Flash and Alchemy.~~
   * LuaAlchemyDevelopmentModel: Create a stub page to join OnLuaAlchemy, CodingGuidelines, ContributorsGitWorkflow, MaintainersGitWorkflow.
 
 = Design =
