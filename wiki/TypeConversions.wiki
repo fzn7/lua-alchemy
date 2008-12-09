@@ -1,6 +1,8 @@
 #summary Description of type conversion rules between Lua and ActionScript.
 
-*TODO* Cover !ActionScript 3 types better.
+= Introduction =
+
+*TODO:* Cleanup
 
 There are eight types in Lua:
 
@@ -40,3 +42,37 @@ a bit here).
 
 *TODO* We should decide also if bytearray actually fits here --
 probably not.
+
+= !ActionScript -> Lua =
+
+Primitive types:
+
+   * Boolean -> boolean
+   * int  -> number
+   * Null -> nil
+   * Number -> number
+   * String -> string
+   * uint -> number
+   * void -> nil
+
+Complex types:
+
+Note that userdata "type" (metatable) should be different for each
+case, as there are things you can do with each type.
+
+   * Object -> userdata, convertible to table
+   * Array -> userdata, convertible to table
+   * Vector -> userdata, convertible to table
+   * Dictionary -> userdata, convertible to table
+   * ByteArray -> userdata, convertible to table and to string
+   * Function -> userdata with __call metamethod (as3.new("Function")(args))
+
+   * Error -> ???
+
+   * MovieClip, Bitmap, Shape, TextField, SimpleButton, Date, RegExp,
+Video, XML, XMLList -> the same kind of userdata as for any other
+"user-supplied" AS3 class.
+
+= Lua -> !ActionScript =
+
+*TODO*
