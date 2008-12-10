@@ -41,3 +41,7 @@ See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
   * FeatureWishList: Implement Flex data bindings support.
   * FeatureWishList: Implement no-compiler feature.
   * KnownProblems: Investigate Alchemy + llvm-lua feature further.
+
+= Organizational =
+
+  * Ensure everywhere in code and in docs project is named "Lua Alchemy" if spaces are fit or "lua-alchemy" (with dash) if not. The "lua_alchemy" is the last resort if dash is not available.
