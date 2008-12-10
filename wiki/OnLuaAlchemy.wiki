@@ -48,12 +48,6 @@ We need *Lua Alchemy* to...
 
 *Lua Achemy* is licensed at the same license as Lua 5.1: the *[http://github.com/lua-alchemy/lua-alchemy/tree/master/COPYRIGHT MIT license]*. This means that Lua Alchemy is *free software* and can be used for both academic and commercial purposes *at absolutely no cost*.
 
-== Development model ==
-
-*TODO:* Write based on [http://groups.google.com/group/lua-alchemy-dev/browse_thread/thread/ad7c66d2c93cc4d3 this] discussion. Put it on LuaAlchemyDevelopmentModel page.
-
-See also: ContributorsGitWorkflow, MaintainersGitWorkflow, GitTipsAndTricks, CodingGuidelines.
-
 = See also =
 
   * InitialFileReleases
@@ -62,3 +56,4 @@ See also: ContributorsGitWorkflow, MaintainersGitWorkflow, GitTipsAndTricks, Cod
   * RandomNotes
   * RecommendedReading
   * ToDo
+  * LuaAlchemyDevelopmentModel
