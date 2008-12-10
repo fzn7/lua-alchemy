@@ -2,4 +2,4 @@
 
   * CodingGuidelines
   * ContributorsGitWorkflow
-  * MaintainersGitWorkfow
+  * MaintainersGitWorkflow
