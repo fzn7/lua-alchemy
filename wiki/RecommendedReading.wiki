@@ -20,6 +20,7 @@ Deep technical info on details of Lua VM:
 
   * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler.pdf FlaCC (former name of Adobe Alchemy) presentation slides]
   * [http://llvm.org/devmtg/2008-08/Petersen_FlashCCompiler_Hi.m4v FlaCC presentation video]
+  * [http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Developing_with_Alchemy Developing with Alchemy]
 
 = !ActionScript =
 
