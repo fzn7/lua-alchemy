@@ -7,10 +7,19 @@ See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
 
 *TODO:* Move this to [http://code.google.com/p/lua-alchemy/issues/list Issues]?
 
+= Unsorted =
+
+  * Add this to the VFS proposal:
+    `supplyFile(path:String, data:ByteArray)`: This method allows you to provide a file at a specified path for the C code. This is useful if your C code expects a configuration file at a specific location that is not accessible to the runtime due to security restrictions. (Quote from [http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Developing_with_Alchemy:AS3_API here].)
+  * Integrate VFS "proposal" to the docs. If it would be changed, it would be changed inplace.
+  * Use this for io?! Hide that sprite and show it on ctrl+l as a console!
+    `setSprite(sprite:Sprite):void`: This method takes a sprite to use as the "command line" for Alchemy. It will create a new TextField on this Sprite and channel output from STDOUT, STDERR to it. It will also accept input and route to STDIN. This is not required to be set, but it will be by default. (Quote from [http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Developing_with_Alchemy:AS3_API here].)
+
 = Documentation / Wiki =
 
   * ~~OnLuaAlchemy: Fill the background section with white-paper stuff on Lua, Flash and Alchemy.~~
   * ~~LuaAlchemyDevelopmentModel: Create a stub page to join OnLuaAlchemy, CodingGuidelines, ContributorsGitWorkflow, MaintainersGitWorkflow.~~
+  * Cleanup Project Home page (move OnLuaAlchemy there?).
 
 = Design =
 
