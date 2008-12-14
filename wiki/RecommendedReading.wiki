@@ -29,7 +29,7 @@ Deep technical info on details of Lua VM:
 
 = Git =
 
-    _Note you do not need to know anything about Git to *use* Lua Alchemy_
+    _Note: you do not need to know anything about Git to *use* Lua Alchemy_
 
   * Resources on this wiki: GitTipsAndTricks, ContributorsGitWorkflow, MaintainersGitWorkflow.
   * [http://github.com/guides/home GitHub guides]
