@@ -45,6 +45,10 @@ See also: [http://code.google.com/p/lua-alchemy/issues/list Issues]
   * CoreLuaLibraries: Check that Supported System Functions work correctly in sandboxed mode
   * CoreLuaLibraries: Check that Unsupported System Functions do not break anything in sandboxed mode
 
+== Tests ==
+
+  * Write some wrapper(s) to reduce copy-pasted noise.
+
 = Extra features =
 
   * FeatureWishList: Implement Flex data bindings support.
