@@ -23,9 +23,9 @@ We should put "virtual file system" wrapper on the file (both code and data) acc
    * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to ease porting of existing sources:
 	 
 	 {{{ 
-	dofile("thisswf://path/file.lua") 
-	local file = assert(io.open("thisswf://path/data.dat", "r"))
-	AS3.io_set_default_prefix("thisswf://path")
+	dofile("builtin://path/file.lua") 
+	local file = assert(io.open("builtin://path/data.dat", "r"))
+	AS3.io_set_default_prefix("builtin://path")
 	dofile("file.lua") -- same file as above
 	}}}
 
