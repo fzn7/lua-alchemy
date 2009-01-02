@@ -66,11 +66,11 @@ We should put "virtual file system" wrapper on the file (both code and data) acc
 	 local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
 	 }}}
 
-	 == Lua Modules ==
+== Lua Modules ==
 
 	 Lua's `require()` does not separate shared library modules from the plain Lua modules. See [http://www.lua.org/manual/5.1/manual.html#pdf-require docs] on how it works. We should replace `package.loaders` contents with our functions which know about our VFS. Once we have that and have working `loadfile()`, all would have to do is implement `[http://www.lua.org/manual/5.1/manual.html#pdf-package.loadlib package.loadlib]` to load shared libraries -- this should be enough.
 
-The above proposal also affects these functions:
+The above also affects these functions:
 
   * io.open()
   * io.input()
@@ -78,6 +78,46 @@ The above proposal also affects these functions:
   * io.tmpfile()
   * os.remove()
   * os.rename()
+
+== Note on possible implementation ==
+
+To allow reading of "weird" files, not available by `supplyFile()`, we may use `funopen()` approach to get `FILE*` pointer on `ByteArray`.
+
+Code from libpng sample in Alchemy:
+{{{
+/* Does a FILE * read against a ByteArray */
+int readba(void *cookie, char *dst, int size)
+{
+  return AS3_ByteArray_readBytes(dst, (AS3_Val)cookie, size);
+}
+
+/* Does a FILE * write against a ByteArray */
+int writeba(void *cookie, const char *src, int size)
+{
+  return AS3_ByteArray_writeBytes((AS3_Val)cookie, (char *)src, size);
+}
+
+/* Does a FILE * lseek against a ByteArray */
+fpos_t seekba(void *cookie, fpos_t offs, int whence)
+{
+  return AS3_ByteArray_seek((AS3_Val)cookie, offs, whence);
+}
+
+/* Does a FILE * close against a ByteArray */
+int closeba(void * cookie)
+{
+  AS3_Val zero = AS3_Int(0);
+
+  /* just reset the position */
+  AS3_SetS((AS3_Val)cookie, "position", zero);
+  AS3_Release(zero);
+  return 0;
+}
+
+// open up a file that fwds operations to the ByteArray
+FILE *f = funopen((void *)dest, readba, writeba, seekba, closeba);
+
+}}}
 
 = Supported System Functions =
 
