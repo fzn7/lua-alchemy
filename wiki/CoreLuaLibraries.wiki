@@ -55,7 +55,7 @@ We should put "virtual file system" wrapper on the file (both code and data) acc
 	 local write_file = assert(io.open("save://", "w"))
 	 }}}
 
-	 !*NOTE:* [AG] I do not like this filename-less notation much. Any ideas?
+	 !*NOTE:* *AG:* I do not like this filename-less notation much. Any ideas?
 
 	 !*TODO:* There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
 
