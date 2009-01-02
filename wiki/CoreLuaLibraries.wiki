@@ -18,59 +18,57 @@ To allow comfortable reuse of existing Lua code with Lua Alchemy, we must suppor
   * `require() and package.*` for Lua sources
   * `require() and package.*` for Lua C (or other language) shared library modules, compiled in Alchemy.
 
-*TODO: By Alexander Gladysh, TBD:*
+We should put "virtual file system" wrapper on the file (both code and data) access. VFS targets:
 
-    I propose to put "virtual file system" wrapper on the file (both code and data) access. VFS targets:
+   * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to ease porting of existing sources:
+	 
+	 {{{ 
+	dofile("thisswf://path/file.lua") 
+	local file = assert(io.open("thisswf://path/data.dat", "r"))
+	AS3.io_set_default_prefix("thisswf://path")
+	dofile("file.lua") -- same file as above
+	}}}
 
-       * Files, bundled into the current SWF (read-only). Should be configurable from Lua, C and/or !ActionScript so prefix could be removed to ease porting of existing sources:
-         
-         {{{ 
-        dofile("thisswf://path/file.lua") 
-        local file = assert(io.open("thisswf://path/data.dat", "r"))
-        AS3.io_set_default_prefix("thisswf://path")
-        dofile("file.lua") -- same file as above
-        }}}
+	Default prefix setting should support all of available options. Note from the Lua point of view `AS3.io_set_default_prefix("path")` is conceptually the same as `os.exec("cd path")`.
+	 
+   * Files, bundled into other SWFs (read-only; available SWFs added with special API function from Lua, C and/or !ActionScript). *TODO:* Ensure that no AS3 SWF load specifics would inhibit this.
 
-        Default prefix setting should support all of available options. Note from the Lua point of view `AS3.io_set_default_prefix("path")` is conceptually the same as `os.exec("cd path")`.
-         
-       * Files, bundled into other SWFs (read-only; available SWFs added with special API function from Lua, C and/or !ActionScript). *TODO:* Ensure that no AS3 SWF load specifics would inhibit this.
+	 {{{ 
+	 AS3.io_add_swf("swf-name", "URI")
+	 dofile("swf://swf-name/path/file.lua") 
+	 local file = assert(io.open("swf://swf-name/path/data.dat", "r"))
+	 }}}
 
-         {{{ 
-         AS3.io_add_swf("swf-name", "URI")
-         dofile("swf://swf-name/path/file.lua") 
-         local file = assert(io.open("swf://swf-name/path/data.dat", "r"))
-         }}}
+   * Files, located on the local Flash storage (read/write).
 
-       * Files, located on the local Flash storage (read/write).
+	 {{{ 
+	 dofile("storage://path/file.lua")
+	 local file = assert(io.open("storage://path/data.dat", "r+"))
+	 }}}
+	 !*NOTE:* Loading code from local storage seems to be silly and insecure. Probably we should disable it.
 
-         {{{ 
-         dofile("storage://path/file.lua")
-         local file = assert(io.open("storage://path/data.dat", "r+"))
-         }}}
-         !*NOTE:* Loading code from local storage seems to be silly and insecure. Probably we should disable it.
+   * Files, uploaded by user with open/save file dialog (read for open/write for save).
 
-       * Files, uploaded by user with open/save file dialog (read for open/write for save).
+	 {{{ 
+	 dofile("open://") -- A lua script runner
+	 local read_file = assert(io.open("open://", "r"))
+	 local write_file = assert(io.open("save://", "w"))
+	 }}}
 
-         {{{ 
-         dofile("open://") -- A lua script runner
-         local read_file = assert(io.open("open://", "r"))
-         local write_file = assert(io.open("save://", "w"))
-         }}}
+	 !*NOTE:* [AG] I do not like this filename-less notation much. Any ideas?
 
-         !*NOTE:* I do not like this filename-less notation much. Any ideas?
+	 !*TODO:* There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
 
-         !*TODO:* There could be problems with that save:// files would likely to allowed to save only once. So the actual save is to be done only when handle is closed.
+   * Files, located in the file system (read/write within sandbox limits; no limits in console mode).
 
-       * Files, located in the file system (read/write within sandbox limits; no limits in console mode).
+	 {{{ 
+	 dofile("file:///Users/Me/myfile.lua")
+	 local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
+	 }}}
 
-         {{{ 
-         dofile("file:///Users/Me/myfile.lua")
-         local file = assert(io.open("C:\\Windows\\system32\\drivers\\etc\\hosts", "r+"))
-         }}}
+	 == Lua Modules ==
 
-         == Lua Modules ==
-
-         Lua's `require()` does not separate shared library modules from the plain Lua modules. See [http://www.lua.org/manual/5.1/manual.html#pdf-require docs] on how it works. We should replace `package.loaders` contents with our functions which know about our VFS. Once we have that and have working `loadfile()`, all would have to do is implement `[http://www.lua.org/manual/5.1/manual.html#pdf-package.loadlib package.loadlib]` to load shared libraries -- this should be enough.
+	 Lua's `require()` does not separate shared library modules from the plain Lua modules. See [http://www.lua.org/manual/5.1/manual.html#pdf-require docs] on how it works. We should replace `package.loaders` contents with our functions which know about our VFS. Once we have that and have working `loadfile()`, all would have to do is implement `[http://www.lua.org/manual/5.1/manual.html#pdf-package.loadlib package.loadlib]` to load shared libraries -- this should be enough.
 
 The above proposal also affects these functions:
 
