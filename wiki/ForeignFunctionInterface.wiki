@@ -95,21 +95,21 @@ This may be done well from Lua scripts (and by calling Lua collectgarbage()), bu
 == Create AS3 Object ==
 {{{
 syntax = as3.package.ClassName.new(param1, ..., paramN)
-example1 = as3.String.new("Hello There")
-example2 = as3.flash.utils.ByteArray.new()
+example1 = as3.package.String.new("Hello There")
+example2 = as3.package.flash.utils.ByteArray.new()
 }}}
 Can we use something like as3.flash.utils::ByteArray.new()? 
 Should we have as3.type(v) return in form like "flash.utils.ByteArray"
 == Get Member Property ==
 {{{
 value = as3obj.property
-example1 = as3.Array.new()
+example1 = as3.package.Array.new()
 len = example.length
 }}}
 == Set Member Property ==
 {{{
 as3obj.property = value
-example1 = as3.MyClass.new()
+example1 = as3.package.MyClass.new()
 example.text = "Hello There"
 }}}
 == Call Member Function ==
@@ -118,7 +118,7 @@ return = as3obj.function([param1, ..., paramN])
 example1 = as3.Array.new()
 example1.push(5)
 
-example2 = as3.MyClass.new()
+example2 = as3.package.MyClass.new()
 example2.someFunction()
 result = example2.anotherFunction(1, "hello")
 }}}
@@ -126,22 +126,22 @@ Would calling make more sense to use the : syntax common in lua?
 == Get A Class ==
 {{{
 syntax = as3.package.ClassName.class()
-example = as3.flash.utils.ByteArray.class()
+example = as3.package.flash.utils.ByteArray.class()
 }}}
 You should be able to call static functions or get static methods using this class just as if it were an instance created with new.  But sometimes you may want to directly call into a class without creating an instance like done in ActionScript
 == Get Static Property ==
 {{{
 syntax = as3.package.ClassName.property
-example1 = as3.MyClass.SOME_CONSTANT
+example1 = as3.package.MyClass.SOME_CONSTANT
 }}}
 == Set Static Property ==
 {{{
 as3.package.ClassName.property = value
-as3.MyClass.text = "hello"
+as3.package.MyClass.text = "hello"
 }}}
 == Call Static Function ==
 {{{
 as3.package.ClassName.function([param1, ..., paramN])
-as3.MyClass.someFunction()
-as3.MyClass.anotherFunction(1, 6, 999)
+as3.package.MyClass.someFunction()
+as3.package.MyClass.anotherFunction(1, 6, 999)
 }}}
