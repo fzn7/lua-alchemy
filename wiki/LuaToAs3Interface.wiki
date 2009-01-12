@@ -73,7 +73,7 @@ Example
 as3.flyield() 
 }}}
 
-===as3.class("[package::]ClassName")===
+===as3.class("[package::]!ClassName")===
 Return the requested class in package::ClassName form. The return can be used to call static class functions or get/set static properties
 
 Note: Only classes that have been included in the demo can be created. At the very least all of mx.containers and mx.controls has been included along with all the top level and default classes all flash objects get.
@@ -83,7 +83,7 @@ Example
 local v = as3.class("flash.utils:ByteArray") 
 }}}
 
-===as3.new("[package::]ClassName[, param1,... paramN]")===
+===as3.new("[package::]!ClassName[, param1,... paramN]")===
 Create a new instance of the given class in package::ClassName form.
 
 Note: Only classes that have been included in the demo can be created. At the very least all of mx.containers and mx.controls has been included along with all the top level and default classes all flash objects get.
