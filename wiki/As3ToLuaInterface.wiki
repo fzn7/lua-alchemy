@@ -1,0 +1,45 @@
+#summary The AS3 interface to access Lua
+
+= ActionScript To Lua Interface =
+
+== LuaAlchemy#LuaAlchemy() ==
+Create and init() a new Lua interpreter
+
+@see init()
+
+== LuaAlchemy#init():void ==
+Initialize the Lua interpreter.  If already initialized, it will be closed
+and then initialized.
+
+@see close()
+
+== LuaAlchemy#close():void ==
+/Close the Lua interpreter and cleanup.
+
+== LuaAlchemy#doFile(strFileName:String):Array ==
+Run the given file.  Returns an array of values represting
+the results of the call.  The first return value is true/false based on
+if the string is sucessfully run.  If sucessful, the remaining values
+are the Lua return values.  If failed, the second value is the error.
+Note at this time you can only run LuaAsset files.
+
+@param strValue The string to run.
+
+@return The Lua return call stack.
+
+== LuaAlchemy#doString(strValue:String):Array ==
+Run the given string.  Returns an array of values represting
+the results of the call.  The first return value is true/false based on
+if the string is sucessfully run.  If sucessful, the remaining values
+are the Lua return values.  If failed, the second value is the error.
+
+@param strValue The string to run.
+
+@return The Lua return call stack.
+
+== LuaAlchemy#setGlobal(key:String, value:`*`):void ==
+Set a global Lua variable with the key/value pair.
+
+@param key The name of the new global variable
+
+@param value The value of the new global variable
