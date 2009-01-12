@@ -1,3 +1,5 @@
+#summary Describes Lua's interface to access ActionScript
+
 ==AS3 Sugar==
 The AS3 Sugar provides a Lua-like way to access AS3 class and instance creation, property getter/setters, and function calls.
 
