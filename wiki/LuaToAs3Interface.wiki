@@ -46,20 +46,20 @@ You should be able to call static functions or get static methods using this cla
 === Get Static Property ===
 {{{
 syntax = as3.package.ClassName.property
-example1 = as3.package.MyClass.class().SOME_CONSTANT
+example1 = as3.package.MyClass.SOME_CONSTANT
 }}}
 
 === Set Static Property ===
 {{{
 as3.package.ClassName.property = value
-as3.package.MyClass.class().text = "hello"
+as3.package.MyClass.text = "hello"
 }}}
 
 === Call Static Function ===
 {{{
 as3.package.ClassName.function([param1, ..., paramN])
-as3.package.MyClass.class().someFunction()
-v = as3.package.MyClass.class().anotherFunction(1, 6, 999)
+as3.package.MyClass.someFunction()
+v = as3.package.MyClass.anotherFunction(1, 6, 999)
 }}}
 
 ==Raw AS3 Interface==
