@@ -19,12 +19,12 @@
   * A framework to ease integration of Lua into !ActionScript.
   * A layer for doing type conversions from Lua to !ActionScript and vice versa. See TypeConversions.
   * As cross-boundary calls between !ActionScript and C are slow (and C/Lua is fast), we must allow user to write his custom optimized C layer for his specific task, preferably using our low-level functionality like type-conversion. 
-  * For rapid development we support generic interoperability between Lua and !ActionScript. This is the *main feature* of the Lua Alchemy library. See ForeignFunctionInterface.
+  * For rapid development we support generic interoperability between Lua and !ActionScript. This is the *main feature* of the Lua Alchemy library. See LuaToAs3Interface and As3ToLuaInterface.
 
 = Extra features =
 
   * Flex *data bindings* support is available as a feature, *optional* for end-user.
-  * A library to construct UI as simple as it can be done with MXML. Could be easily done with Lua-based Data Description Language. *TODO:* Elaborate on that.
+  * A library to construct UI as simple as it can be done with MXML. Could be easily done with Lua-based Data Description Language.
   *  We may speed up our embedded Lua applications by removing compilation stage and bundling compiled Lua bytecode instead of sources. Also removing compilator itself from the library could save some space. Compilation in Lua is blazingly fast, but since we're running inside a VM... Anyway, this should be optional mode, not the default one for Lua Alchemy.
 
 = Lua Support =
