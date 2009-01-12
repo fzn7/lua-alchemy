@@ -2,12 +2,12 @@
 
 = !ActionScript To Lua Interface =
 
-== LuaAlchemy#LuaAlchemy() ==
+== !LuaAlchemy#!LuaAlchemy() ==
 Create and init() a new Lua interpreter
 
 @see init()
 
-== LuaAlchemy#init():void ==
+== !LuaAlchemy#init():void ==
 Initialize the Lua interpreter.  If already initialized, it will be closed
 and then initialized.
 
