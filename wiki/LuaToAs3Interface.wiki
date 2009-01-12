@@ -34,7 +34,8 @@ example2 = as3.package.MyClass.new()
 example2.someFunction()
 result = example2.anotherFunction(1, "hello")
 }}}
-Would calling make more sense to use the : syntax common in lua?
+
+TODO: Would calling make more sense to use the : syntax common in lua?
 
 === Get A Class ===
 {{{
