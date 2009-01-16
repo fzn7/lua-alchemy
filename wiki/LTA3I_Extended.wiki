@@ -37,11 +37,9 @@ local str = as3.prints("The meaning of life:", 42) --> "The meaning of life: 42"
 
 ===as3.filegetcontents(file)===
 
-TODO
+This function currently does not work due to flyield() problem. It would be documented after problem is resolved.
 
-===as3.canvas===
-
-TODO off by default; how to enable
+TODO.
 
 ===as3.toobject(t)===
 
