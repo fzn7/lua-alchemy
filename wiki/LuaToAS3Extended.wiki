@@ -41,6 +41,8 @@ This function currently does not work due to flyield() problem. It would be docu
 
 TODO.
 
+See also AutoAssets and "Modular sources and File IO" section in CoreLuaLibraries.
+
 ===as3.toobject(t)===
 
 Retuns AS3 `Object` (associative array), created from the given table.
