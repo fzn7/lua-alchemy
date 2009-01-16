@@ -24,7 +24,7 @@ Lua Alchemy `loadfile()` works as follows:
 
 The virtual filesystem root is expected to be set in global Lua variable `_LUA_ALCHEMY_FILESYSTEM_ROOT`. If it is `nil`, then virtual filesystem root is assumed to be `builtin://`.
 
-See also AutoAssets and "Modular sources and File IO" section in CoreLuaLibraries.
+See also AutoAssets and *"Modular sources and File IO"* section in CoreLuaLibraries.
 
 ===dofile(filename)===
 
