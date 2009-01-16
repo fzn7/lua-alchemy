@@ -1,5 +1,11 @@
 #summary Describes Lua's interface to access ActionScript
 
+  * [LTA3I_Sugar AS3 Sugar]
+  * [LTA3I_Raw Raw AS3 Interface]
+  * [LTA3I_Extended Extended AS3 Interface]
+  * [LTA3I_LuaOverrides Modified Lua Functions]
+  * [LTA3I_Strict Global Environment Protection]
+
 ==AS3 Sugar==
 The AS3 Sugar provides a Lua-like way to access AS3 class and instance creation, property getter/setters, and function calls.
 
@@ -11,6 +17,8 @@ as3.trace(hello) -- Traces "Hello World!"
 }}}
 
 *Note:* Only classes that have been included in the SWF can be created. For the demo all of mx.containers and mx.controls have been included along with all the top level and default classes all SWFs get.
+
+TODO: How to disable
 
 === Create AS3 Object ===
 {{{
@@ -203,6 +211,8 @@ assert(as3.isas3value(box) == true)
 
 These functions are implemented in Lua
 
+TODO: How to disable
+
 ===as3.onclose(function)===
 Function to call when !LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup. You may register any number of such callbacks by calling `as3.onclose()` multiple times. Callbacks would be called in the same order as they were added.
 Example
@@ -239,7 +249,7 @@ TODO
 
 ===as3.canvas===
 
-TODO
+TODO off by default; how to enable
 
 ===as3.toobject(t)===
 
@@ -265,7 +275,7 @@ Lua `print()` is redirected to `as3.trace()`
 
 == Global Environment Protection ==
 
-TODO
+TODO How it works; off by default; how to enable;
 
 ===declare===
 
