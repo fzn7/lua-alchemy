@@ -51,8 +51,7 @@ Handles nested tables. Detects recursive tables (and raises error). Raises error
 
 Example:
 {{{
-local object = as3.toobject({name = "NAME", param = { value = 42 } })
---> { name: "NAME", param: { value: 42 } }
+local object = as3.toobject({name = "NAME", param = { value = 42 } }) --> { name: "NAME", param: { value: 42 } }
 }}}
 
 ===as3.toarray(t)===
