@@ -11,7 +11,7 @@ as3.trace(hello) -- Traces "Hello World!"
 
 *Note:* Only classes that have been included in the SWF can be created. For the demo all of mx.containers and mx.controls have been included along with all the top level and default classes all SWFs get.
 
-TODO: How to disable
+Sugar is optional feature. See UsingRawLuaAlchemy.
 
 === Create AS3 Object ===
 {{{
