@@ -78,7 +78,7 @@ v = as3.namespace.MyClass.anotherNamespaceFunction(1, 6, 999)
 }}}
 
 ==Raw AS3 Interface==
-Low level calls to the AS3 interface.  Functions provided through sugar are as3.newclass(), as3.new(), as3.get(), as3.set(), and as3.call().  as3.release() frees the reference to an AS3 class and is done automatically when an object is garbage collected by Lua.
+Low level calls to the AS3 interface. Sugar wraps these functions: as3.newclass(), as3.new(), as3.get(), as3.set(), and as3.call(). as3.release() frees the reference to an AS3 class and is done automatically when an object is garbage collected by Lua.
 
 ===as3.flyield()===
 Release control to Flash and return to this point on the next timer tick. This currently doesn't allow UI updates, but does prevent the script from timing out over long operations. 
@@ -278,4 +278,3 @@ TODO
 ===is_declared===
 
 TODO
-
