@@ -47,7 +47,7 @@ To expose your assets to Lua, you need to do as follows:
 
   # Link newly generated `LuaAssets.as` file to your .swf.
   # Call `LuaAssets.init()` to expose assets with Alchemy's `supplyFile()`. Note that current (0.5a) Alchemy implementation does not allow once supplied file to be overridden. It silently ignores all subsequent attempts to supply file with the same name again.
-  # Use `LuaAssets.filesystemRoot()` value to set `_LUA_ALCHEMY_FILESYSTEM_ROOT` Lua global variable. `LuaAlchemy` class sets this variable for you automatically. Note that while you may have as many LuaAssets classes as you want to, there is only one filesystem root variable.
+  # Use `LuaAssets.filesystemRoot()` value to set `_LUA_ALCHEMY_FILESYSTEM_ROOT` Lua global variable. `LuaAlchemy` class sets this variable for you automatically. Note that while you may have as many `LuaAssets` classes as you want to, there is only one filesystem root variable.
 
 Example initialization using `LuaAlchemy` class:
 
