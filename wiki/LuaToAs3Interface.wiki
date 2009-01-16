@@ -190,13 +190,13 @@ Example
 as3.trace("Hello from Lua Alchemy!") 
 }}}
 
-===as3.is_as3_value(obj)===
+===as3.isas3value(obj)===
 Returns true if object is as3 value. Returns nil otherwise
 
 Example
 {{{
 local box = as3.new("mx.containers::Canvas")
-assert(as3.is_as3(box) == true) 
+assert(as3.isas3value(box) == true) 
 }}}
 
 ===as3.onclose(function)===
