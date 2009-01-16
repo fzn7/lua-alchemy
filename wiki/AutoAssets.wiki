@@ -53,7 +53,7 @@ Example initialization using `LuaAlchemy` class:
 
 {{{
 LuaAssets.init(LuaAlchemy.libInit);
-var lua:LuaAlchemy = LuaAlchemy.new(LuaAssets.filesystemRoot());
+var lua:LuaAlchemy = new LuaAlchemy(LuaAssets.filesystemRoot());
 }}}
 
 See `demo/Rapid` for more complete example.
