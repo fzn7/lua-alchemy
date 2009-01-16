@@ -1,7 +1,7 @@
-#summary Describes Lua's interface to access ActionScript
+#summary Describes Lua interface to access ActionScript
 
   * [LuaToAS3Sugar AS3 Sugar]
-  * [LTA3I_Raw Raw AS3 Interface]
+  * [LuaToAS3LowLevel LowLevel AS3 Interface]
   * [LTA3I_Extended Extended AS3 Interface]
   * [LTA3I_LuaOverrides Modified Lua Functions]
   * [LTA3I_Strict Global Environment Protection]
