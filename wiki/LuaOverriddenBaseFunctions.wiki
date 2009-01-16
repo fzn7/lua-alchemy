@@ -11,7 +11,7 @@ See also CoreLuaLibraries for future plans.
 The `loadfile()` function is overridden to allow loading from Lua files, embedded into current .swf file.
 
 Support is planned for loading from local filesystem for trusted .swfs (TODO: `flyield()` issue blocks this).
-To use this feature, you need to declare your .swf as a trusted one. See scripts 'etc/osx-rapid-*.sh' for a hint on how to do this. TODO: Document these scripts.
+To use this feature, you need to declare your .swf as a trusted one. See scripts `'etc/osx-rapid-*.sh'` for a hint on how to do this. TODO: Document these scripts.
 
 Note that original Lua `loadfile()` supports call *without arguments*, triggering read from `stdin`. Currently this feature is *not supported*.
 
