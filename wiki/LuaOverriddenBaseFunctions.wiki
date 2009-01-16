@@ -1,0 +1,15 @@
+#summary Documentation for Lua functions, overridden in Lua Alchemy
+
+TODO How to disable override
+
+===loadfile===
+
+TODO
+
+===dofile===
+
+TODO
+
+===print===
+
+Lua `print()` is redirected to `as3.trace()`
