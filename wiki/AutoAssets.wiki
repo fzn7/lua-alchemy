@@ -62,7 +62,7 @@ See `demo/Rapid` for more complete example.
 
 === init(libInitializer:`*`):void ===
 
-Initializes !LuaAssets data and exposes embedded files to given Alchemy's CLib initializer by calling supplyFile.
+Initializes `LuaAssets` data and exposes embedded files to given Alchemy's `CLib` initializer by calling `supplyFile()`.
 
 === filesystemRoot():String ===
 
