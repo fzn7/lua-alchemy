@@ -2,7 +2,11 @@
 
 = gen_assets.sh =
 
-TODO: Describe command-line options and LuaAssets.as.template macroses.
+TODO: Describe command-line options
+
+= !LuaAssets.as.template =
+
+TODO:  LuaAssets.as.template macroses.
 
 = !LuaAssets.as =
 
