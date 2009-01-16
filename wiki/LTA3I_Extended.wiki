@@ -49,4 +49,9 @@ TODO
 
 ===as3.toarray(t)===
 
-TODO
+Returns AS3 `Array` object, created from the given table. Takes in account array part of the table only (as per `ipairs()` rules). Handles nested tables. Detects recursive tables (and raises error). Converts one-based Lua arrays to zero-based AS3 arrays.
+
+Example
+{{{
+local array = as3.toarray({ "one", "two", { 42 }) --> ["one", "two", [42]]
+}}}
