@@ -22,6 +22,8 @@ Lua Alchemy `loadfile()` works as follows:
     #. Otherwise file is loaded with AS3 `URLLoader`. (*NOTE:* Currently this step always fails due to `flyield()` issue.)
     #. If file load fails and effective prefix was not `builtin://` and original filename did not contained prefix, it is attempted to load the file from the path `"builtin://"..filename`. This is needed to speed up end-user code development by allowing him to drop in embedded Lua code changes on the filesystem without the need to recompile .swf.
 
+The virtual filesystem root is expected to be set in global Lua variable `_LUA_ALCHEMY_FILESYSTEM_ROOT`. If it is `nil`, then virtual filesystem root is assumed to be `builtin://`.
+
 See also AutoAssets and "Modular sources and File IO" section in CoreLuaLibraries.
 
 ===dofile(filename)===
