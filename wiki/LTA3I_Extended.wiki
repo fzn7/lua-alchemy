@@ -45,11 +45,21 @@ TODO off by default; how to enable
 
 ===as3.toobject(t)===
 
-TODO
+Retuns AS3 `Object` (associative array), created from the given table.
+
+Handles nested tables. Detects recursive tables (and raises error). Raises error if table contains non-string keys. Note that numeric keys are intentionally not converted to strings to avoid confusion (in Lua these keys are different: `{[1] = true}` and `{["1"] = true}`).
+
+Example:
+{{{
+local object = as3.toobject({name = "NAME", param = { value = 42 } })
+--> { name: "NAME", param: { value: 42 } }
+}}}
 
 ===as3.toarray(t)===
 
-Returns AS3 `Array` object, created from the given table. Takes in account array part of the table only (as per `ipairs()` rules). Handles nested tables. Detects recursive tables (and raises error). Converts one-based Lua arrays to zero-based AS3 arrays.
+Returns AS3 `Array` object, created from the given table. 
+
+Takes in account array part of the table only (as per `ipairs()` rules). Handles nested tables. Detects recursive tables (and raises error). Converts one-based Lua arrays to zero-based AS3 arrays.
 
 Example
 {{{
