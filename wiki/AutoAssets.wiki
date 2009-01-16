@@ -66,4 +66,4 @@ Initializes `LuaAssets` data and exposes embedded files to given Alchemy's `CLib
 
 === filesystemRoot():String ===
 
-Returns virtual filesystem root. Note this value is hardcoded at the run time. This is a developer's convenience feature, not suitable for .swf end-users. It is intended to replace "process working directory" notion, missing in ActionScript.
+Returns virtual filesystem root. Note this value is hardcoded at the run time. This is a developer's convenience feature, not suitable for .swf end-users. It is intended to replace "process working directory" notion, missing in !ActionScript.
