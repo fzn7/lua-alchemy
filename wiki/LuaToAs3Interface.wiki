@@ -3,7 +3,7 @@
 ==AS3 Sugar==
 The AS3 Sugar provides a Lua-like way to access AS3 class and instance creation, property getter/setters, and function calls.
 
-Values return from sugar are always AS3 Objects for performance reasons.  If you need to perform Lua operations on these values, you may need to convert them to Lua types using as3.tolua(value).
+Values return from sugar are always AS3 Objects for performance reasons.  If you need to perform Lua operations on these values, you should convert them to Lua types using as3.tolua(value).
 {{{
 example = as3.class.String.new("Hello")
 hello = as3.tolua(example) .. " World!"
@@ -199,12 +199,15 @@ local box = as3.new("mx.containers::Canvas")
 assert(as3.isas3value(box) == true) 
 }}}
 
-===as3.onclose(function)===
-Function to call when !LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup.
+==Extended AS3 interface==
 
+These functions are implemented in Lua
+
+===as3.onclose(function)===
+Function to call when !LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup. You may register any number of such callbacks by calling `as3.onclose()` multiple times. Callbacks would be called in the same order as they were added.
 Example
 {{{
-as3.on_close(
+as3.onclose(
   function(e)
     timer.stop()
     timer.removeEventListener(as3.class.flash.events.TimerEvent.TIMER, movebox)
@@ -214,7 +217,7 @@ as3.on_close(
 *Note:* Flash doesn't reliably call anything when a Flex application is closed so the intention of this function is to do cleanup when you are creating and closing !LuaAlchemy objects numerous times during a single instance of Flash.  The cleanup is less important on shutdown of Flash since everything is stopped and all memory is recovered.
 
 ===as3.makeprinter(output)===
-Reroutes Lua print() calls by appending to output.text
+Returns print-like function, which appends its arguments to `output.text`, where output is arbitrary as3 object.
 
 Example
 {{{
@@ -222,5 +225,57 @@ print = as3.makeprinter(output)
 print("Hello from Lua")
 }}}
 
+===as3.prints(...)===
+
+TODO
+
+===as3.printu(...)===
+
+TODO
+
 ===as3.filegetcontents(file)===
-TODO document this
+
+TODO
+
+===as3.canvas===
+
+TODO
+
+===as3.toobject(t)===
+
+TODO
+
+===as3.toarray(t)===
+
+TODO
+
+== Modified Lua Functions ==
+
+===loadfile===
+
+TODO
+
+===dofile===
+
+TODO
+
+===print===
+
+Lua `print()` is redirected to `as3.trace()`
+
+== Global Environment Protection ==
+
+TODO
+
+===declare===
+
+TODO
+
+===exports===
+
+TODO
+
+===is_declared===
+
+TODO
+
