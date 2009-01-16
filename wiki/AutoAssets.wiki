@@ -1,12 +1,45 @@
 #summary A way to automatically embed to .swf files that would be visible from Lua
 
+Lua Alchemy provides auxilary tool to allow auto-embedding of files into .swf file. Such embedded files are made visible to Lua by the means of Alchemy's `supplyFile()` function.
+
 = gen_assets.sh =
 
-TODO: Describe command-line options
+This file generates `LuaAssets.as` file, to embed all files in the given directory and subdirectories into an .swf.
 
-= !LuaAssets.as.template =
+== build.xml ==
 
-TODO:  LuaAssets.as.template macroses.
+The `gen_assets.sh` script is intended to be embedded into your `build.xml` script:
+
+{{{
+  <target name="generate.assets">
+    <exec executable="${build.tools.dir}/gen_assets.sh" dir="${basedir}"
+      input="${build.tools.dir}/LuaAssets.as.template"
+      output="${basedir}/src/LuaAssets.as">
+      <arg path="${basedir}/assets"/><!-- filesystem_root -->
+      <arg value="LuaAssets"/><!-- assets_class_name -->
+      <arg path="${basedir}/assets"/><!-- assets_prefix -->
+      <arg value="mypackage"/><!-- package_name -->
+    </exec>
+  </target>
+}}}
+
+Make your compilation targets depend on `generate.assets`. See `demo/Rapid` for example.
+
+== Usage ==
+
+`$ gen_assets.sh filesystem_root assets_class_name assets_prefix [package_name] < in_file > out_file`
+
+Template file must be piped to stdin, resulting file is piped to stdout.
+
+Arguments:
+  * `filesystem_root` -- A root directory where asset files are.
+  * `assets_class_name` --
+  * `assets_prefix` --
+  * `package_name` -- (optional, default is no package).
+
+== !LuaAssets.as.template ==
+
+The `gen_assets.sh` script is intended to be used with `LuaAssets.as.template` file as input. You usually do not need to change anything in this file.
 
 = !LuaAssets.as =
 
