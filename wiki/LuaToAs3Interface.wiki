@@ -194,3 +194,17 @@ Example
 local box = as3.new("mx.containers::Canvas")
 assert(as3.is_as3(box) == true) 
 }}}
+
+===as3.onclose(function)===
+Function to call when LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup.
+
+Example
+{{{
+as3.on_close(
+  function(e)
+    timer.stop()
+    timer.removeEventListener(as3.class.flash.events.TimerEvent.TIMER, movebox)
+  end)
+}}}
+
+*Note:* Flash doesn't reliably call anything when a Flex application is closed so the intention of this function is to do cleanup when you are creating and closing LuaAlchemy objects numerous times during a single instance of Flash.  The cleanup is less important on shutdown of Flash since everything is stopped and all memory is recovered.
