@@ -212,3 +212,6 @@ as3.on_close(
 }}}
 
 *Note:* Flash doesn't reliably call anything when a Flex application is closed so the intention of this function is to do cleanup when you are creating and closing !LuaAlchemy objects numerous times during a single instance of Flash.  The cleanup is less important on shutdown of Flash since everything is stopped and all memory is recovered.
+
+===as3.filegetcontents(file)===
+TODO document this
