@@ -33,9 +33,9 @@ Template file must be piped to stdin, resulting file is piped to stdout.
 
 Arguments:
   * `filesystem_root` -- A root directory where asset files are.
-  * `assets_class_name` --
-  * `assets_prefix` --
-  * `package_name` -- (optional, default is no package).
+  * `assets_class_name` -- The name of assets class.
+  * `assets_prefix` -- The prefix to the source filename for Embed directive. Usually the same as `filesystem_root`.
+  * `package_name` -- The name of assets class package (optional, default is no package).
 
 == !LuaAssets.as.template ==
 
