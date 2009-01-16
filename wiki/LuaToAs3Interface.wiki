@@ -3,7 +3,7 @@
   * [LuaToAS3Sugar AS3 Sugar]
   * [LuaToAS3LowLevel LowLevel AS3 Interface]
   * [LuaToAS3Extended Extended AS3 Interface]
-  * [LuaOverriddenBaseFunctions Modified Lua Functions]
+  * [LuaOverriddenBaseFunctions Overidden Lua Functions]
 
 See also
   * [LuaGlobalEnvironmentProtection Global Environment Protection]
