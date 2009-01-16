@@ -10,7 +10,7 @@ hello = as3.tolua(example) .. " World!"
 as3.trace(hello) -- Traces "Hello World!"
 }}}
 
-Note: Only classes that have been included in the SWF can be created. For the demo all of mx.containers and mx.controls have been included along with all the top level and default classes all SWFs get.
+*Note:* Only classes that have been included in the SWF can be created. For the demo all of mx.containers and mx.controls have been included along with all the top level and default classes all SWFs get.
 
 === Create AS3 Object ===
 {{{
@@ -49,7 +49,7 @@ result = example2.anotherFunction(1, "hello")
 syntax = as3.class.ClassName.class()
 example = as3.class.flash.utils.ByteArray.class()
 }}}
-You should be able to call static functions or get static methods using this class just as if it were an instance created with new.  But sometimes you may want to directly call into a class without creating an instance like done in ActionScript
+You should be able to call static functions or get static methods using this class just as if it were an instance created with new.  But sometimes you may want to directly call into a class without creating an instance like done in !ActionScript
 
 === Get Static Property ===
 {{{
@@ -81,7 +81,9 @@ v = as3.namespace.MyClass.anotherNamespaceFunction(1, 6, 999)
 Low level calls to the AS3 interface.  Functions provided through sugar are as3.newclass(), as3.new(), as3.get(), as3.set(), and as3.call().  as3.release() frees the reference to an AS3 class and is done automatically when an object is garbage collected by Lua.
 
 ===as3.flyield()===
-Release control to Flash and return to this point on the next timer tick. This currently doesn't allow UI updates, but does prevent the script from timing out over long operations. Note this function is not related to Lua coroutines.
+Release control to Flash and return to this point on the next timer tick. This currently doesn't allow UI updates, but does prevent the script from timing out over long operations. 
+
+*Note:* this function is not related to Lua coroutines.
 
 Example
 {{{
@@ -89,7 +91,7 @@ as3.flyield()
 }}}
 
 ===as3.newclass("[package::]!ClassName")===
-Return the requested class in package::ClassName form. The return can be used to call static class functions or get/set static properties
+Return the requested class in package::!ClassName form. The return can be used to call static class functions or get/set static properties
 
 Example
 {{{
@@ -97,9 +99,9 @@ local v = as3.newclass("flash.utils:ByteArray")
 }}}
 
 ===as3.new("[package::]!ClassName[, param1,... paramN]")===
-Create a new instance of the given class in package::ClassName form.
+Create a new instance of the given class in package::!ClassName form.
 
-Note: Only classes that have been included in the demo can be created. At the very least all of mx.containers and mx.controls has been included along with all the top level and default classes all flash objects get.
+*Note:* Only classes that have been included in the demo can be created. At the very least all of mx.containers and mx.controls has been included along with all the top level and default classes all flash objects get.
 
 Example
 {{{
@@ -108,7 +110,7 @@ local s = as3.new("String", "some string")
 }}}
 
 ===as3.release(this)===
-Release the given ActionScript object so Flash will do garbage collection.
+Release the given !ActionScript object so Flash will do garbage collection.
 
 Example
 {{{
@@ -116,8 +118,10 @@ local v = as3.new("String")
 as3.release(v) 
 }}}
 
+*Note:* This is done automatically by !LuaAlchemy when the variable falls out of scope.
+
 ===as3.tolua(this, ...)===
-Convert ActionScript value to a Lua type if possible (see push_as3_to_lua_stack). Supports multiple arguments. If conversion is not possible, this will return the original AS object. If argument is a Lua value, it is returned intact.
+Convert !ActionScript value to a Lua type if possible (see push_as3_to_lua_stack). Supports multiple arguments. If conversion is not possible, this will return the original AS object. If argument is a Lua value, it is returned intact.
 
 Example
 {{{
@@ -134,7 +138,7 @@ local n, f = as3.toas3(42, function() end) -- n is Number 42, f is an AS3 functi
 }}}
 
 ===as3.get(this, "property")===
-Return the requested property of a given ActionScript object. The value is returned as a Lua type if possible (see as3.tolua())
+Return the requested property of a given !ActionScript object. The value is returned as a Lua type if possible (see as3.tolua())
 
 Example
 {{{
@@ -143,7 +147,7 @@ return as3.get(v, "length")
 }}}
 
 ===as3.set(this, "property", value)===
-Set the requested property of a given ActionScript object.
+Set the requested property of a given !ActionScript object.
 
 Example
 {{{
@@ -152,7 +156,7 @@ as3.set(v, "text", "hello")
 }}}
 
 ===as3.call(this, "function"[, param1, ... paramN])===
-Call a function on a given ActionScript object
+Call a function on a given !ActionScript object
 
 Example
 {{{
@@ -161,7 +165,7 @@ as3.call(box, "setStyle", "backgroundColor", "blue")
 }}}
 
 ===as3.type(this)===
-Returns the ActionScript getQualifiedClassName() for the given value
+Returns the !ActionScript getQualifiedClassName() for the given value
 
 Example
 {{{
@@ -196,7 +200,7 @@ assert(as3.is_as3(box) == true)
 }}}
 
 ===as3.onclose(function)===
-Function to call when LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup.
+Function to call when !LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup.
 
 Example
 {{{
@@ -207,4 +211,4 @@ as3.on_close(
   end)
 }}}
 
-*Note:* Flash doesn't reliably call anything when a Flex application is closed so the intention of this function is to do cleanup when you are creating and closing LuaAlchemy objects numerous times during a single instance of Flash.  The cleanup is less important on shutdown of Flash since everything is stopped and all memory is recovered.
+*Note:* Flash doesn't reliably call anything when a Flex application is closed so the intention of this function is to do cleanup when you are creating and closing !LuaAlchemy objects numerous times during a single instance of Flash.  The cleanup is less important on shutdown of Flash since everything is stopped and all memory is recovered.
