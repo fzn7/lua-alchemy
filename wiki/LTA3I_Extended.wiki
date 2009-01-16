@@ -1,8 +1,6 @@
 #summary Documents extended AS3 interface
 
-These functions are implemented in Lua
-
-TODO: How to disable
+These functions are implemented in Lua. If you do not need this functionality, you may strip it. See UsingRawLuaAlchemy.
 
 ===as3.onclose(function)===
 Function to call when !LuaAlchemy#close() is called.  This will typically be used to call removeListener() and do any other necessary AS3 cleanup. You may register any number of such callbacks by calling `as3.onclose()` multiple times. Callbacks would be called in the same order as they were added.
