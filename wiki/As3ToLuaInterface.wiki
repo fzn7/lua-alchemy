@@ -6,6 +6,7 @@
 Create and init() a new Lua interpreter
 
 @param virtualFilesystemRoot The root of virtual file system (default "builtin://")
+
 @see init()
 
 == !LuaAlchemy#init(virtualFilesystemRoot:`*` = null):void ==
@@ -13,6 +14,7 @@ Initialize the Lua interpreter.  If already initialized, it will be closed
 and then initialized.
 
 @param virtualFilesystemRoot The new root of virtual file system (optional)
+
 @see close()
 
 == !LuaAlchemy#close():void ==
