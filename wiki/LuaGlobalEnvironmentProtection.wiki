@@ -2,7 +2,7 @@
 
 == Global Environment Protection ==
 
-TODO How it works; off by default; how to enable;
+TODO Why is it needed. How it works; off by default; how to enable;
 
 ===declare(name)===
 
