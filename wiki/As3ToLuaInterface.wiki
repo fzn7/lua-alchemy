@@ -2,15 +2,17 @@
 
 = !ActionScript To Lua Interface =
 
-== !LuaAlchemy#!LuaAlchemy() ==
+== !LuaAlchemy#!LuaAlchemy(virtualFilesystemRoot:* = null) ==
 Create and init() a new Lua interpreter
 
+@param virtualFilesystemRoot The root of virtual file system (default "builtin://")
 @see init()
 
-== !LuaAlchemy#init():void ==
+== !LuaAlchemy#init(virtualFilesystemRoot:* = null):void ==
 Initialize the Lua interpreter.  If already initialized, it will be closed
 and then initialized.
 
+@param virtualFilesystemRoot The new root of virtual file system (optional)
 @see close()
 
 == !LuaAlchemy#close():void ==
@@ -21,7 +23,7 @@ Run the given file.  Returns an array of values represting
 the results of the call.  The first return value is true/false based on
 if the string is sucessfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
-Note at this time you can only run LuaAsset files.
+Note at this time you can only run AutoAssets files.
 
 @param strValue The string to run.
 
