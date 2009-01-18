@@ -1,6 +1,6 @@
 #summary Description and help for the main Lua Alchemy demo
 
-Project Home: http://code.google.com/p/lua-alchemy/
+Project Home: [http://code.google.com/p/lua-alchemy/]
 Version: v0.2a
 
 = Introduction =
@@ -28,4 +28,4 @@ print("Hello World")
 
 *Note:* Only classes that have been included in the demo can be created. At the very least all of mx.containers and mx.controls has been included along with all the top level and default classes all flash objects get.
 
-= [LuaToAs3Interface Lua to !ActionScript Interface] =
+= [LuaToAs3Interface Lua to ActionScript Interface] =
