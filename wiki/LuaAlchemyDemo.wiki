@@ -1,10 +1,7 @@
 #summary Description and help for the main Lua Alchemy demo
 
-Project Home: [http://code.google.com/p/lua-alchemy/]
-Version: v0.2a
-
 = Introduction =
-Lua Alchemy is a port of the Lua 5.1.4 programming language for ActionScript using Alchemy.
+Lua Alchemy is a port of the Lua 5.1.4 programming language for !ActionScript using Alchemy.
 
 = Known Issues =
  * *Code Editor* - !TextArea makes for a poor code editor. Behavior of copy/paste is erratic and you may loose line returns. You can load/save files and use a real code editor if needed.
