@@ -42,8 +42,20 @@ are the Lua return values.  If failed, the second value is the error.
 @return The Lua return call stack.
 
 == !LuaAlchemy#setGlobal(key:String, value:`*`):void ==
-Set a global Lua variable with the key/value pair.
+Set a global Lua variable with the key/value pair.  The value is not converted to a native Lua type.
 
 @param key The name of the new global variable
+@param value The global value
 
-@param value The value of the new global variable
+== !LuaAlchemy#setGlobalLuaValue(key:String, value:`*`):void ==
+Set a global Lua variable with the key/value pair.  The value is converted to a Lua type if possible.
+
+@param key The name of the new global variable
+@param value The global value
+
+== !LuaAlchemy#supplyFile(name:String, data:!ByteArray):void ==
+Supply a ByteArray as a file in Lua
+
+@param name The name of the file within Lua
+
+@param data The contents of the file
