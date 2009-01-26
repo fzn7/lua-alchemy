@@ -1,6 +1,6 @@
 #summary Documentation for low level AS3 interface in Lua
 
-Low level calls to the AS3 interface. [LTA3I_Sugar Sugar] wraps these functions: as3.newclass(), as3.new(), as3.get(), as3.set(), and as3.call(). as3.release() frees the reference to an AS3 class and is done automatically when an object is garbage collected by Lua.
+Low level calls to the AS3 interface. LuaToAS3Sugar wraps these functions: as3.newclass(), as3.new(), as3.get(), as3.set(), and as3.call(). as3.release() frees the reference to an AS3 class and is done automatically when an object is garbage collected by Lua.
 
 ===as3.flyield()===
 Release control to Flash and return to this point on the next timer tick. This currently doesn't allow UI updates, but does prevent the script from timing out over long operations. 
