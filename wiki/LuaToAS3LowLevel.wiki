@@ -60,7 +60,7 @@ local n, f = as3.toas3(42, function() end) -- n is Number 42, f is an AS3 functi
 }}}
 
 ===as3.get(this, "property")===
-Return the requested property of a given !ActionScript object. The value is returned as an ActionScript type (see as3.tolua() to convert to a native Lua type)
+Return the requested property of a given !ActionScript object. The value is returned as an !ActionScript type (see as3.tolua() to convert to a native Lua type)
 
 Example
 {{{
@@ -78,7 +78,7 @@ as3.set(v, "text", "hello")
 }}}
 
 ===as3.call(this, "function"[, param1, ... paramN])===
-Call a function on a given !ActionScript object.  Any return values are returned as an ActionScript type (see as3.tolua() to convert to a native Lua type)
+Call a function on a given !ActionScript object.  Any return values are returned as an !ActionScript type (see as3.tolua() to convert to a native Lua type)
 
 Example
 {{{
@@ -96,7 +96,7 @@ local type = as3.type(box) --> "mx.containers::Canvas"
 }}}
 
 ===as3.namespacecall("package", "function"[, param1, ... paramN])===
-Call a namespace level function.  Any return values are returned as an ActionScript type (see as3.tolua() to convert to a native Lua type)
+Call a namespace level function.  Any return values are returned as an !ActionScript type (see as3.tolua() to convert to a native Lua type)
 
 
 Example
