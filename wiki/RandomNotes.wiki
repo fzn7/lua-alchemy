@@ -37,8 +37,8 @@ mm.cfg
 
 Download mm.cfg into your Windows home directory ("C:\Documents and Settings\username"). This file specifies
 -----------------------------------
-ErrorReportingEnable = 1 
-TraceOutputFileEnable = 1 
+`ErrorReportingEnable = 1`
+`TraceOutputFileEnable = 1`
 -----------------------------------
 
 If your system already has an mm.cfg file, paste these two lines into it.
@@ -97,25 +97,25 @@ Requirements
 
 Steps
 
-Step 1 Download and install Cygwin. Make sure to install the following packages:
+  #Step 1 Download and install Cygwin. Make sure to install the following packages:
 
     * Perl
     * zip
     * gcc / g++ 
 
-Step 2 Download and install Java.
+  #Step 2 Download and install Java.
 
-Step 3 Make sure to restart the Cygwin terminal after installing Java.
+  #Step 3 Make sure to restart the Cygwin terminal after installing Java.
 
-Step 4 Download and install the Flex SDK, and add the $FLEX_HOME/bin directory to your Cygwin environment's path (within ~/.bashrc) (See below for an example).
+  #Step 4 Download and install the Flex SDK, and add the $FLEX_HOME/bin directory to your Cygwin environment's path (within ~/.bashrc) (See below for an example).
 
-Step 5Download the Alchemy Package for your system from the pre-release site. For this example, we will assume that Windows is being used.
+  #Step 5 Download the Alchemy Package for your system from the pre-release site. For this example, we will assume that Windows is being used.
 
-Step 6 Unzip the package and copy the alchemy folder to you system. We will refer to this path as $ALCHEMY_HOME
+  #Step 6 Unzip the package and copy the alchemy folder to you system. We will refer to this path as $ALCHEMY_HOME
 
-Step 7 Open a Cygwin terminal and change to the $ALCHEMY_HOME/ directory.
+  #Step 7 Open a Cygwin terminal and change to the $ALCHEMY_HOME/ directory.
 
-Step 8 Run the $ALCHEMY_HOME/config script
+  #Step 8 Run the $ALCHEMY_HOME/config script
 
 ./config
 
@@ -125,48 +125,50 @@ export ADL=/cygdrive/c/flex/bin/adl.exe
 
 Make sure to uncomment this line, and that it contains the path to ADL.exe on your system.
 
-Step 10 Open your bash setup script to edit. This can usually be found in the ~/.bashrc file.
+  #Step 10 Open your bash setup script to edit. This can usually be found in the ~/.bashrc file.
 
-Step 11 Edit the the .bashrc script so that alchemy-setup is run when the script is run:
+  #Step 11 Edit the the .bashrc script so that alchemy-setup is run when the script is run:
 
 source /cygdrive/c/alchemy/alchemy-setup
 
 This should be added before your PATH is modified.
 
-Step 12 Add $ALCHEMY_HOME/achacks to your path.
+  #Step 12 Add $ALCHEMY_HOME/achacks to your path.
 
 PATH=$ALCHEMY_HOME/achacks:/cygdrive/c/flex/bin:$PATH
 
 You .bashrc file should look similar to:
 
+{{{
 source /cygdrive/c/alchemy/alchemy-setup
 PATH=$ALCHEMY_HOME/achacks:/cygdrive/c/flex/bin:$PATH
 export PATH
+}}}
 
 The file may contain other commands specific to your system.
 
-Step 13 Save the file, and restart your cygwin terminal.
+  #Step 13 Save the file, and restart your cygwin terminal.
 
-Step 14 Change to the $ALCHEMY_HOME/bin directory, and run the following command:
+  #Step 14 Change to the $ALCHEMY_HOME/bin directory, and run the following command:
 
 ln -s llvm-stub llvm-stub.exe
 
 Note that this step wont be necessary in future builds.
 
-Step 15 Change to the $ALCHEMY_HOME/samples/stringecho directory
+  #Step 15 Change to the $ALCHEMY_HOME/samples/stringecho directory
 
-Step 16 Type the following command in the terminal
+  #Step 16 Type the following command in the terminal
 
 alc-on; which gcc
 
 It should print out the path that points to the gcc contained with the $ALCHEMY_HOME/achacks/ directory.
 
-Step 17 Enter the following command to compile the c program into a SWC:
+  #Step 17 Enter the following command to compile the c program into a SWC:
 
 gcc stringecho.c -O3 -Wall -swc -o stringecho.swc
 
 You should see output similar to:
-
+{{{
 $ gcc stringecho.c -O3 -Wall -swc -o stringecho.swc
 WARNING: While resolving call to function 'main' arguments were dropped!
 
@@ -192,9 +194,9 @@ frame count: 1
 0 : 0
   adding: catalog.xml (deflated 75%)
   adding: library.swf (deflated 61%)
-
-Step 18 Type ls -l You should see output similar to:
-
+}}}
+   #Step 18 Type ls -l You should see output similar to:
+{{{
 labuser@LABVM-VU32EN /cygdrive/c/alchemy/samples/stringecho
 $ ls -l
 total 1181
@@ -208,15 +210,15 @@ drwx------+ 2 Administrators None      0 Oct 22 11:59 as3
 -r-x------+ 1 Administrators None    435 Oct 20 20:41 readme.txt
 -r-x------+ 1 Administrators None   1221 Oct 20 20:41 stringecho.c
 -rwxr-xr-x  1 labuser        None 144099 Oct 22 14:38 stringecho.swc
-
+}}}
 Make sure stringecho.swc is present in the directory.
 
-Step 19The stringecho.swc SWC can now be used in a Flash Player 10 ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
+  #Step 19 The stringecho.swc SWC can now be used in a Flash Player 10 ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
 
-Step 20 Change to the $ALCHEMY_HOME/samples/stringecho/as3 directory.
+  #Step 20 Change to the $ALCHEMY_HOME/samples/stringecho/as3 directory.
 
-Step 21 This directory contains a simple ActionScript file that contains the following code which uses the SWC we just created:
-
+  #Step 21 This directory contains a simple ActionScript file that contains the following code which uses the SWC we just created:
+{{{
 package
 {
 	import flash.display.Sprite;
@@ -232,8 +234,8 @@ package
 		}
 	}
 }
-
-Step 22 Use the following command to compile the ActionScript code using MXMLC:
+}}}
+  #Step 22 Use the following command to compile the ActionScript code using MXMLC:
 
 mxmlc.exe -library-path+=../stringecho.swc --target-player=10.0.0 EchoTest.as
 
