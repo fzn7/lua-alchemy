@@ -1,4 +1,5 @@
 #summary Lua interface to access ActionScript
+#labels Featured
 
   * [LuaToAS3Sugar AS3 Sugar]
   * [LuaToAS3LowLevel LowLevel AS3 Interface]
