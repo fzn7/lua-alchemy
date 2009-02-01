@@ -37,8 +37,8 @@ mm.cfg
 
 Download mm.cfg into your Windows home directory ("C:\Documents and Settings\username"). This file specifies
 -----------------------------------
-ErrorReportingEnable=1
-TraceOutputFileEnable=1
+ErrorReportingEnable = 1 
+TraceOutputFileEnable = 1 
 -----------------------------------
 
 If your system already has an mm.cfg file, paste these two lines into it.
