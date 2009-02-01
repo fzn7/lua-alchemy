@@ -97,13 +97,13 @@ Requirements
 
 Steps
 
-  #Step 1 Download and install Cygwin. Make sure to install the following packages:
+*Step 1* Download and install Cygwin. Make sure to install the following packages:
 
     * Perl
     * zip
     * gcc / g++ 
 
-  #Step 2 Download and install Java.
+*Step 2* Download and install Java.
 
   #Step 3 Make sure to restart the Cygwin terminal after installing Java.
 
