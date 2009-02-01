@@ -2,6 +2,23 @@
 
 = Introduction =
 
+When making calls across the !ActionScript `<->` Lua boundary Lua types are automatically converted to !ActionScript types but all data returned from ActionScript to Lua remains as ActionScript userdata until explicitly converted with a call to as3.tolua() (see LuaToAS3LowLevel).  The reason for not converting to Lua types automatically are to allow call chaining in Lua (a.b.c().d) of !ActionScript objects without taking a large performance hit.
+
+We would have to actually call as3.get() on each index operation. We would
+have to call as3.type() on the result. If result is function, we throw
+newly created AS3 closure away. If it is plain value, we call as3.tolua()
+on it. Otherwise we return the value.
+
+Marshalling aross the Lua`<->`C`<->`AS3 boundary each time (or dropping Lua if
+we rewrite sugar in C).
+
+If foo.bar returned a string and you did a string operation on it, wheich
+returned a string, which returned a string....
+you might expect to be able to call a chain of AS3 functions but it would
+stop when it hit one that could convert to a Lua type and then start
+calling Lua functions
+
+
 *TODO:* Cleanup
 
 There are eight types in Lua:
