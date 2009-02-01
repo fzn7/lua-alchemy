@@ -195,7 +195,7 @@ frame count: 1
   adding: catalog.xml (deflated 75%)
   adding: library.swf (deflated 61%)
 }}}
-   #Step 18 Type ls -l You should see output similar to:
+*Step 18* Type ls -l You should see output similar to:
 {{{
 labuser@LABVM-VU32EN /cygdrive/c/alchemy/samples/stringecho
 $ ls -l
