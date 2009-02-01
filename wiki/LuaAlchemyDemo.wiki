@@ -1,4 +1,5 @@
 #summary Description and help for the main Lua Alchemy demo
+#labels Featured
 
 = Introduction =
 Lua Alchemy is a port of the Lua 5.1.4 programming language for !ActionScript using Alchemy.
