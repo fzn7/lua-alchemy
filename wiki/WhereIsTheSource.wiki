@@ -7,5 +7,4 @@ Lua Alchemy project sources are hosted on [http://github.com]:
 If you wish, you may browse [http://code.google.com/p/lua-alchemy/source/checkout Wiki SVN contents].
 
 See also: 
-  * OnLuaAlchemy
   * LuaAlchemyDevelopmentModel
