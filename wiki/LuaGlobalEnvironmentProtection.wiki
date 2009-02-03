@@ -52,7 +52,7 @@ foo, bar, baz = 1, 2, 3
 
 ===is_declared(name)===
 
-Detect if global variable was declared. Note the difference between "declared" and "defined". If you need to detect if a given global variable was *defined* and *declared*, do as in example (`not not` converts to boolean):
+Detect if global variable was declared. Note the difference between "declared" and "defined". If you need to detect if a given global variable was both defined *and* declared, do as in example (`not not` converts to boolean):
 
 {{{
 local declared_and_defined = is_declared("foo") and (not not foo)
