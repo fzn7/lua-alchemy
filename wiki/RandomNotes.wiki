@@ -20,25 +20,25 @@ There is no official site from which to download Cygwin; the setup program offer
 
 Double-clicking C:\cygwin\Cygwin.bat opens a window in which you can enter command lines. You'll probably want to keep a shortcut to this somewhere convenient.
 
-==Install J2SE 5.0_13==
+===Install J2SE 5.0_13===
 
 Sun has archived this particular release here. Click on the "Download JDK" link and accept the license agreement. Click the "Windows Offline Installation, Multi-language" link to download the installer, which is named jdk-1_5_0_13-windows-i586-p.exe.
 
 Run this installer, which requires administrative permissions. You should accept all of the installer's defaults. The branch setup scripts assume that the JDK will be installed at C:\Program Files\Java\jdk1.5.0_13. Wait until the installer completes, then restart your machine.
 
-==Install Ant 1.7.0==
+===Install Ant 1.7.0===
 
 Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). . Put the apache-ant-1.7.0 folder that's inside the ZIP at the root of your C: drive. Make sure that Ant's bin folder is at C:/apache-ant-1.7.0/bin.
 
-==Configure Flash Player==
+===Configure Flash Player===
 {{{
 mm.cfg
 }}}
 
 Download mm.cfg into your Windows home directory ("C:\Documents and Settings\username"). This file specifies
 {{{
-`ErrorReportingEnable = 1`
-`TraceOutputFileEnable = 1`
+ErrorReportingEnable = 1
+TraceOutputFileEnable = 1
 }}}
 
 If your system already has an mm.cfg file, paste these two lines into it.
