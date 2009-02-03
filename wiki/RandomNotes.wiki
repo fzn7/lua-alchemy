@@ -12,7 +12,7 @@
 (Information from)
 (* http://opensource.adobe.com/wiki/display/flexsdk/Setup+on+Windows)
 
-==Install the latest version of Cygwin==
+===Install the latest version of Cygwin===
 
 Download Cygwin's installer, setup.exe, here and run it (Vista/IE7 users may need to right-click on the link and save the file locally before running it, as it may not run directly from clicking in the browser). You can accept the default settings, except that you must set the Default Text File Type to "DOS / Text".
 
