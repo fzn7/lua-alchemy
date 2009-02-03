@@ -12,7 +12,7 @@
 (Information from)
 (* http://opensource.adobe.com/wiki/display/flexsdk/Setup+on+Windows)
 
--=Install the latest version of Cygwin=-
+==Install the latest version of Cygwin==
 
 Download Cygwin's installer, setup.exe, here and run it (Vista/IE7 users may need to right-click on the link and save the file locally before running it, as it may not run directly from clicking in the browser). You can accept the default settings, except that you must set the Default Text File Type to "DOS / Text".
 
@@ -20,26 +20,26 @@ There is no official site from which to download Cygwin; the setup program offer
 
 Double-clicking C:\cygwin\Cygwin.bat opens a window in which you can enter command lines. You'll probably want to keep a shortcut to this somewhere convenient.
 
--=Install J2SE 5.0_13=-
+==Install J2SE 5.0_13==
 
 Sun has archived this particular release here. Click on the "Download JDK" link and accept the license agreement. Click the "Windows Offline Installation, Multi-language" link to download the installer, which is named jdk-1_5_0_13-windows-i586-p.exe.
 
 Run this installer, which requires administrative permissions. You should accept all of the installer's defaults. The branch setup scripts assume that the JDK will be installed at C:\Program Files\Java\jdk1.5.0_13. Wait until the installer completes, then restart your machine.
 
--=Install Ant 1.7.0=-
+==Install Ant 1.7.0==
 
 Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). . Put the apache-ant-1.7.0 folder that's inside the ZIP at the root of your C: drive. Make sure that Ant's bin folder is at C:/apache-ant-1.7.0/bin.
 
--=Configure Flash Player=-
------------------------------------
+==Configure Flash Player==
+{{{
 mm.cfg
------------------------------------
+}}}
 
 Download mm.cfg into your Windows home directory ("C:\Documents and Settings\username"). This file specifies
------------------------------------
+{{{
 `ErrorReportingEnable = 1`
 `TraceOutputFileEnable = 1`
------------------------------------
+}}}
 
 If your system already has an mm.cfg file, paste these two lines into it.
 FlashPlayerTrust
@@ -47,9 +47,9 @@ FlashPlayerTrust
 Open the directory C:\WINDOWS\system32\Macromed\Flash. If it doesn't already contain a directory named FlashPlayerTrust, create one. Download FlexSDK.cfg into FlashPlayerTrust. Vista/IE7 users may need to save the file onto the desktop first and then copy it locally into this directory; saving into a folder in the WINDOWS\system32 hierarchy directly from IE7 may quietly fail due to the browser's security model.
 
 This file simply contains
------------------------------------
+{{{
 C:\
------------------------------------
+}}}
 
 so that SWFs anywhere on your C: drive are trusted to load local content. If you don't develop on C: drive, change the drive letter or add additional lines.
 
@@ -57,31 +57,31 @@ Note: If you are getting "Security Sandbox Violation" errors (e.g. when running 
 Test your setup
 
 To test your setup, launch Cygwin, change your working directory to the trunk of the Flex SDK, and run its setup.sh script:
------------------------------------
+{{{
 cd flex/sdk/trunk
 source setup.sh
------------------------------------
+}}}
 
 Execute
 
------------------------------------
+{{{
 java -version
------------------------------------
+}}}
 
 and confirm that Java 1.5.0_13 is being found.
 
 Execute
 
------------------------------------
+{{{
 ant -version
------------------------------------
+}}}
 
 and confirm that Ant 1.7.0 is being found. If you see the warning "cygpath: can't convert empty path", you can ignore it.
 
 
 = Setup Alchemy on Windows =
-(Information from)
-(* http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Getting_Started#Windows)
+Information from:
+* http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Getting_Started#Windows
 
 This section will show how to setup and use Alchemy on Windows using Cygwin.
 Requirements
@@ -94,8 +94,6 @@ Requirements
     * Java
     * Flex 3.2 SDK
     * Flex Builder or Flex SDK setup to target compilation for Flash Player 10 
-
-Steps
 
 *Step 1* Download and install Cygwin. Make sure to install the following packages:
 
