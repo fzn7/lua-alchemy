@@ -35,7 +35,7 @@ TraceOutputFileEnable = 1
 If your system already has an mm.cfg file, paste these two lines into it.
 FlashPlayerTrust
 
-Open the directory C:\WINDOWS\system32\Macromed\Flash. If it doesn't already contain a directory named FlashPlayerTrust, create one. Download FlexSDK.cfg into FlashPlayerTrust. Vista/IE7 users may need to save the file onto the desktop first and then copy it locally into this directory; saving into a folder in the WINDOWS\system32 hierarchy directly from IE7 may quietly fail due to the browser's security model.
+Open the directory C:\WINDOWS\system32\Macromedia\Flash. If it doesn't already contain a directory named FlashPlayerTrust, create one. Download FlexSDK.cfg into FlashPlayerTrust. Vista/IE7 users may need to save the file onto the desktop first and then copy it locally into this directory; saving into a folder in the WINDOWS\system32 hierarchy directly from IE7 may quietly fail due to the browser's security model.
 
 This file simply contains
 {{{
@@ -202,11 +202,11 @@ drwx------+ 2 Administrators None      0 Oct 22 11:59 as3
 }}}
 Make sure stringecho.swc is present in the directory.
 
-*Step 19* The stringecho.swc SWC can now be used in a Flash Player 10 ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
+*Step 19* The stringecho.swc SWC can now be used in a Flash Player 10 !ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
 
 *Step 20* Change to the $ALCHEMY_HOME/samples/stringecho/as3 directory.
 
-*Step 21* This directory contains a simple ActionScript file that contains the following code which uses the SWC we just created:
+*Step 21* This directory contains a simple !ActionScript file that contains the following code which uses the SWC we just created:
 {{{
 package
 {
@@ -224,7 +224,7 @@ package
 	}
 }
 }}}
-*Step 22* Use the following command to compile the ActionScript code using MXMLC:
+*Step 22* Use the following command to compile the !ActionScript code using MXMLC:
 {{{
 mxmlc.exe -library-path+=../stringecho.swc --target-player=10.0.0 EchoTest.as
 }}}
