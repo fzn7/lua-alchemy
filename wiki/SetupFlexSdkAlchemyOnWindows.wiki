@@ -19,7 +19,7 @@ Run this installer, which requires administrative permissions. You should accept
 
 ===Install Ant 1.7.0===
 
-Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). . Put the apache-ant-1.7.0 folder that's inside the ZIP at the root of your C: drive. Make sure that Ant's bin folder is at `C:/apache-ant-1.7.0/bin`.
+Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). . Put the apache-ant-1.7.0 folder that's inside the ZIP at the root of your `C:` drive. Make sure that Ant's bin folder is at `C:/apache-ant-1.7.0/bin`.
 
 ===Configure Flash Player===
 {{{
@@ -42,7 +42,7 @@ This file simply contains
 C:\
 }}}
 
-so that SWFs anywhere on your C: drive are trusted to load local content. If you don't develop on C: drive, change the drive letter or add additional lines.
+so that SWFs anywhere on your `C:` drive are trusted to load local content. If you don't develop on `C:` drive, change the drive letter or add additional lines.
 
 Note: If you are getting "Security Sandbox Violation" errors (e.g. when running ant checkintests), you may need to use more specific directories than `C:\`, e.g. `C:\dev\`. You may put one on each line.
 Test your setup
@@ -79,9 +79,9 @@ Requirements
 
     * Alchemy Toolkit Package for your operating system
     * Cygwin with the following packages installed
-          * Perl
-          * zip
-          * gcc / g++ 
+       * Perl
+       * zip
+       * gcc / g++ 
     * Java
     * Flex 3.2 SDK
     * Flex Builder or Flex SDK setup to target compilation for Flash Player 10 
@@ -96,7 +96,7 @@ Requirements
 
 *Step 3* Make sure to restart the Cygwin terminal after installing Java.
 
-*Step 4* Download and install the Flex SDK, and add the `$FLEX_HOME/bin` directory to your Cygwin environment's path (within ~/.bashrc) (See below for an example).
+*Step 4* Download and install the Flex SDK, and add the `$FLEX_HOME/bin` directory to your Cygwin environment's path (within `~/.bashrc`) (See below for an example).
 
 *Step 5* Download the Alchemy Package for your system from the pre-release site. For this example, we will assume that Windows is being used.
 
@@ -116,7 +116,7 @@ Make sure to uncomment this line, and that it contains the path to `ADL.exe` on 
 
 *Step 10* Open your bash setup script to edit. This can usually be found in the `~/.bashrc` file.
 
-*Step 11* Edit the the .bashrc script so that alchemy-setup is run when the script is run:
+*Step 11* Edit the the `.bashrc` script so that `alchemy-setup` is run when the script is run:
 {{{
 source /cygdrive/c/alchemy/alchemy-setup
 }}}
@@ -152,7 +152,7 @@ alc-on; which gcc
 }}}
 It should print out the path that points to the gcc contained with the `$ALCHEMY_HOME/achacks/` directory.
 
-*Step 17* Enter the following command to compile the c program into a SWC:
+*Step 17* Enter the following command to compile the `c` program into a `SWC`:
 {{{
 gcc stringecho.c -O3 -Wall -swc -o stringecho.swc
 }}}
@@ -184,7 +184,7 @@ frame count: 1
   adding: catalog.xml (deflated 75%)
   adding: library.swf (deflated 61%)
 }}}
-*Step 18* Type ls -l You should see output similar to:
+*Step 18* Type `ls -l` You should see output similar to:
 {{{
 labuser@LABVM-VU32EN /cygdrive/c/alchemy/samples/stringecho
 $ ls -l
@@ -200,13 +200,13 @@ drwx------+ 2 Administrators None      0 Oct 22 11:59 as3
 -r-x------+ 1 Administrators None   1221 Oct 20 20:41 stringecho.c
 -rwxr-xr-x  1 labuser        None 144099 Oct 22 14:38 stringecho.swc
 }}}
-Make sure stringecho.swc is present in the directory.
+Make sure `stringecho.swc` is present in the directory.
 
-*Step 19* The stringecho.swc SWC can now be used in a Flash Player 10 !ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
+*Step 19* The `stringecho.swc` SWC can now be used in a Flash Player 10 !ActionScript or Flex project. Just link it in when compiling like your would link in any other SWC.
 
-*Step 20* Change to the $ALCHEMY_HOME/samples/stringecho/as3 directory.
+*Step 20* Change to the `$ALCHEMY_HOME/samples/stringecho/as3` directory.
 
-*Step 21* This directory contains a simple !ActionScript file that contains the following code which uses the SWC we just created:
+*Step 21* This directory contains a simple !ActionScript file that contains the following code which uses the `SWC` we just created:
 {{{
 package
 {
@@ -228,7 +228,7 @@ package
 {{{
 mxmlc.exe -library-path+=../stringecho.swc --target-player=10.0.0 EchoTest.as
 }}}
-This will generate a Flash Player 10 SWC that traces "foo" when run in the debug player.
+This will generate a Flash Player 10 `SWC` that traces "foo" when run in the debug player.
 Troubleshooting
 
     * Make sure that you are compiling with the Alchemy version of the gcc tools. You can confirm this by typing:
