@@ -35,7 +35,7 @@ TraceOutputFileEnable = 1
 If your system already has an mm.cfg file, paste these two lines into it.
 !FlashPlayerTrust
 
-Open the directory `C:\WINDOWS\system32\Macromedia\Flash`. If it doesn't already contain a directory named FlashPlayerTrust, create one. Download FlexSDK.cfg into !FlashPlayerTrust. Vista/IE7 users may need to save the file onto the desktop first and then copy it locally into this directory; saving into a folder in the `WINDOWS\system32` hierarchy directly from IE7 may quietly fail due to the browser's security model.
+Open the directory `C:\WINDOWS\system32\Macromedia\Flash`. If it doesn't already contain a directory named !FlashPlayerTrust, create one. Download FlexSDK.cfg into !FlashPlayerTrust. Vista/IE7 users may need to save the file onto the desktop first and then copy it locally into this directory; saving into a folder in the `WINDOWS\system32` hierarchy directly from IE7 may quietly fail due to the browser's security model.
 
 This file simply contains
 {{{
@@ -242,3 +242,6 @@ Troubleshooting
       command prior to compiling a project. 
 
 Thats all.
+
+= Troubleshooting =
+Make sure that your user name is written in latin letters.
