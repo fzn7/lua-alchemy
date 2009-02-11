@@ -7,7 +7,7 @@ Information from:
 
 Download Cygwin's installer, `setup.exe`, here and run it (Vista/IE7 users may need to right-click on the link and save the file locally before running it, as it may not run directly from clicking in the browser). You can accept the default settings, except that you must set the Default Text File Type to "DOS / Text".
 
-There is no official site from which to download Cygwin; the setup program offers a number of mirrors for you to choose. Some of them can be flaky, so if you have a problem, try a different mirror. We've had good luck with `ftp://mirrors.kernel.org` and `http://mirrors.kernel.org`.
+There is no official site from which to download Cygwin; the setup program offers a number of mirrors for you to choose. Some of them can be flaky, so if you have a problem, try a different mirror. We've had good luck with *ftp://mirrors.kernel.org and *http://mirrors.kernel.org .
 
 Double-clicking `C:\cygwin\Cygwin.bat` opens a window in which you can enter command lines. You'll probably want to keep a shortcut to this somewhere convenient.
 
