@@ -80,4 +80,5 @@ canvas.addChld(as3_object)
 = TODO =
 
   * Describe UI Builder Object
+  * Document API better
   * Write generated code for the code prototype (Lua, AS3 and MXML)
