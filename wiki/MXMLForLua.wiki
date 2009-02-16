@@ -13,7 +13,7 @@
 
   * Code inside strings is not supported -- use functions
   * No "build-time" checks are done, it is assumed that programmer knows what he wrote.
-  * User would have to link
+  * As usual, user would have to manually link all used components to his swf file.
   * We may use different generators from ui definition -- generate Lua objects, generate AS3 objects, generate MXML.
 
 = Code Prototype =
