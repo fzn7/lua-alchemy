@@ -15,6 +15,7 @@
   * No "build-time" checks are done, it is assumed that programmer knows what he wrote.
   * As usual, user would have to manually link all used components to his swf file.
   * We may use different generators from ui definition -- generate Lua objects, generate AS3 objects, generate MXML.
+  * In the event handler all named objects are available as `self` object fields. For example: `self.vBox`, `self.myName`.
 
 = Code Prototype =
 
