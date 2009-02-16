@@ -16,6 +16,8 @@
   * As usual, user would have to manually link all used components to his swf file.
   * We may use different generators from ui definition -- generate Lua objects, generate AS3 objects, generate MXML.
   * In the event handler all named objects are available as `self` object fields. For example: `self.vBox`, `self.myName`.
+  * `(mx.path:Class) "name" {...}` should also work
+  * We could provide fake mxml namespace to join all subnamespaces of flash.mx (with hardcoded map of class name -> actual namespace in the back).
 
 = Code Prototype =
 
@@ -77,6 +79,35 @@ canvas.addChld(as3_object)
 == UI Builder Object ==
  
   * *TODO*
+
+= Object Generation Pseudocode =
+
+TODO: Describe it with words instead!
+
+{{{
+local ui_builder = as3.ui(path)
+local data = ui_builder:ClassName "id"
+{
+  property = value;
+  styles = { name = value };
+  events =
+  {
+    code = event_handler;
+  }
+}
+}}}
+
+Leads to
+
+{{{
+  local obj = as3.new(ui_builder.path, ClassName) -- handles aliases
+  obj.property = value
+  obj.setStyle(name, value)
+  obj.addEventListener(code, impl.wrap_event_listener(event_handler))
+  impl.register_named_object(obj, id)
+}}}
+
+  * Chidren are attached to parents with addChild().
 
 = TODO =
 
