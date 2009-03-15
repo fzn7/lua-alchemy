@@ -19,8 +19,7 @@ Run this installer, which requires administrative permissions. You should accept
 
 ===Install Ant 1.7.0===
 
-Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). . Put the apache-ant-1.7.0 folder in cygwin.
-Add ant export in `.bashrc file`
+Download the Apache Ant Project's archived release of Ant 1.7.0 here and unzip it (Vista/IE7 users may need to right-click on the link and save the file locally before opening it, as it may unzip directly from clicking in the browser). Put the apache-ant-1.7.0 cygwin. Add Ant export in `.bashrc` file
 {{{
 export ANT_HOME="$(cygpath -w -i /home/Guitar/ant)"
 export PATH="${PATH}${PATH:+:}$(cygpath -u ${ANT_HOME}\\bin)"
