@@ -24,10 +24,7 @@ Some of most juicy features planned:
 
   * Lua replacement for MXML.
   * Full support for advanced Lua types (tables, coroutines) from AS3.
-  * A library to wrap asynchronous AS3 operations (like file access)
-into Lua coroutines for more straightforward end-user's code. (Also
-would serve as a workaround for the notorious flyield() bug of Adobe
-Alchemy, allowing remote dofile() etc.)
+  * A library to wrap asynchronous AS3 operations (like file access) into Lua coroutines for more straightforward end-user's code. (Also would serve as a workaround for the notorious flyield() bug of Adobe Alchemy, allowing remote dofile() etc.)
 
 = Can You Help Lua Alchemy? =
 
@@ -47,9 +44,7 @@ We accept:
 
   # !GitHub pull requests from your forks (preferable).
   # Git patches based on the master branch (send them to the mailing list).
-  # If you're not familiar with Git, but do want to help, you may
-simply get current master, change it and send to mailing list a
-regular patch (or even modified master itself in an archive).
+  # If you're not familiar with Git, but do want to help, you may simply get current master, change it and send to mailing list a regular patch (or even modified master itself in an archive).
 
 When writing code for Lua Alchemy, please try to follow these non-mandatory
 simple rules:
