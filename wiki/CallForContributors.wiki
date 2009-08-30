@@ -45,7 +45,7 @@ Please post to lua-alchemy-dev@googlegroups.com!
 
 We accept:
 
-  # GitHub pull requests from your forks (preferable).
+  # !GitHub pull requests from your forks (preferable).
   # Git patches based on the master branch (send them to the mailing list).
   # If you're not familiar with Git, but do want to help, you may
 simply get current master, change it and send to mailing list a
