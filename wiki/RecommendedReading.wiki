@@ -6,6 +6,7 @@
   * [http://www.inf.puc-rio.br/~roberto/pil2/ Programming in Lua] First edition is available online, but it is recommended to read second one.
   * [http://www.lua.org/lua-l.html Lua Mailing List]
   * [http://lua-users.org/wiki/ Lua Users Wiki]
+  * [http://batbytes.com/luafaq/ Lua Unofficial Frequently Asked Questions (FAQ)]
 
 If you want to get a grasp of why Lua is what it is, read these two:
 
