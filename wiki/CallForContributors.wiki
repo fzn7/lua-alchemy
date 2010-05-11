@@ -22,6 +22,7 @@ See our issue tracker: http://code.google.com/p/lua-alchemy/issues/list
 
 Some of most juicy features planned:
 
+  * Fast AS3<->Lua communication interface
   * Lua replacement for MXML.
   * Full support for advanced Lua types (tables, coroutines) from AS3.
   * A library to wrap asynchronous AS3 operations (like file access) into Lua coroutines for more straightforward end-user's code. (Also would serve as a workaround for the notorious flyield() bug of Adobe Alchemy, allowing remote dofile() etc.)
@@ -55,7 +56,7 @@ simple rules:
 
 What do you need to know:
 
-To contribute code to Lua Alchemy, you need to know ActionScript
+To contribute code to Lua Alchemy, you need to know !ActionScript
 and/or plain C and/or Lua. We have some tasks for any of these
 languages alone, however, due to the nature of Lua Alchemy, most of
 our tasks require a mix of them in various proportions. If you do not
