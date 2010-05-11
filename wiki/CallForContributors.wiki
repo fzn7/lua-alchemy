@@ -22,7 +22,7 @@ See our issue tracker: http://code.google.com/p/lua-alchemy/issues/list
 
 Some of most juicy features planned:
 
-  * Fast AS3<->Lua communication interface
+  * Fast AS3 — Lua communication interface
   * Lua replacement for MXML.
   * Full support for advanced Lua types (tables, coroutines) from AS3.
   * A library to wrap asynchronous AS3 operations (like file access) into Lua coroutines for more straightforward end-user's code. (Also would serve as a workaround for the notorious flyield() bug of Adobe Alchemy, allowing remote dofile() etc.)
