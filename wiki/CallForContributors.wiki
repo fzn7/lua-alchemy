@@ -5,7 +5,7 @@ Lua Alchemy (http://code.google.com/p/lua-alchemy) is the system that
 brings Lua (http://lua.org) to Adobe Flash -- and it needs your help!
 
 We have started our development in December 2008. We are now at
-version 0.2. We even do have our users. :-)
+version 0.2.2.
 
 Lua Alchemy currently allows running Lua code from AS3 and allows that
 Lua code to use AS3 objects transparently. (See our live demo:
