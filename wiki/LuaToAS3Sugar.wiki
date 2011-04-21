@@ -2,8 +2,6 @@
 
 The AS3 Sugar provides a Lua-like way to access AS3 class and instance creation, property getter/setters, and function calls.
 
-To use sugar, load builtin://lua_alchemy.lua either from Lua code (with dofile()) or from AS3 code (with luaAlchemy.doFile()).
-
 Values return from sugar are always AS3 Objects for performance reasons.  If you need to perform Lua operations on these values, you should convert them to Lua types using as3.tolua(value).
 {{{
 example = as3.class.String.new("Hello")
