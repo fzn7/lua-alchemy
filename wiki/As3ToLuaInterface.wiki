@@ -20,14 +20,47 @@ and then initialized.
 == !LuaAlchemy#close():void ==
 /Close the Lua interpreter and cleanup.
 
+== !LuaAlchemy#doFileAsync(strFileName:String, handler:Function):void ==
+Run the given file.  Calls callback when done.
+Callback should accept a single Array argument with
+the results of the call.  The first return value is true/false based on
+if the string is successfully run.  If successful, the remaining values
+are the Lua return values.  If failed, the second value is the error.
+Note at this time you can only run LuaAsset files.
+
+Asynchronous version.
+
+@param strFileName The name of file to run.
+
+@param handler The callback function.
+
+@return The Lua return call stack.
+
+== !LuaAlchemy#doStringAsync(strValue:String, handler:Function):Array ==
+Run the given string.  Calls callback when done.
+Callback should accept a single Array argument with
+the results of the call.  The first return value is true/false based on
+if the string is successfully run.  If successful, the remaining values
+are the Lua return values.  If failed, the second value is the error.
+
+Asynchronous version.
+
+@param strValue The string to run.
+
+@param handler The callback function.
+
+@return The Lua return call stack.
+
 == !LuaAlchemy#doFile(strFileName:String):Array ==
 Run the given file.  Returns an array of values represting
 the results of the call.  The first return value is true/false based on
-if the string is sucessfully run.  If sucessful, the remaining values
+if the string is successfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
-Note at this time you can only run AutoAssets files.
+Note at this time you can only run LuaAsset files.
 
-@param strValue The string to run.
+Deprecated. Use doFileAsync() instead.
+
+@param strFileName The name of file to run.
 
 @return The Lua return call stack.
 
@@ -36,6 +69,8 @@ Run the given string.  Returns an array of values represting
 the results of the call.  The first return value is true/false based on
 if the string is sucessfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
+
+Deprecated. Use doStringAsync() instead.
 
 @param strValue The string to run.
 
