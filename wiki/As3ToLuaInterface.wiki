@@ -26,7 +26,7 @@ Callback should accept a single Array argument with
 the results of the call.  The first return value is true/false based on
 if the string is successfully run.  If successful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
-Note at this time you can only run LuaAsset files.
+Note at this time you can only run AutoAssets files.
 
 Asynchronous version.
 
@@ -56,7 +56,7 @@ Run the given file.  Returns an array of values represting
 the results of the call.  The first return value is true/false based on
 if the string is successfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
-Note at this time you can only run LuaAsset files.
+Note at this time you can only run AutoAssets files.
 
 Deprecated since v0.3. Use doFileAsync() instead.
 
