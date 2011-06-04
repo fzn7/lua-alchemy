@@ -17,7 +17,7 @@ and then initialized.
 
 @see close()
 
-== !LuaAlchemy#close():void ==
+== !LuaAlchemy#close():void (since v0.3) ==
 /Close the Lua interpreter and cleanup.
 
 == !LuaAlchemy#doFileAsync(strFileName:String, handler:Function):void ==
@@ -36,7 +36,7 @@ Asynchronous version.
 
 @return The Lua return call stack.
 
-== !LuaAlchemy#doStringAsync(strValue:String, handler:Function):Array ==
+== !LuaAlchemy#doStringAsync(strValue:String, handler:Function):Array (since v0.3) ==
 Run the given string.  Calls callback when done.
 Callback should accept a single Array argument with
 the results of the call.  The first return value is true/false based on
@@ -58,7 +58,7 @@ if the string is successfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
 Note at this time you can only run LuaAsset files.
 
-Deprecated. Use doFileAsync() instead.
+Deprecated since v0.3. Use doFileAsync() instead.
 
 @param strFileName The name of file to run.
 
@@ -70,7 +70,7 @@ the results of the call.  The first return value is true/false based on
 if the string is sucessfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
 
-Deprecated. Use doStringAsync() instead.
+Deprecated since v0.3. Use doStringAsync() instead.
 
 @param strValue The string to run.
 
