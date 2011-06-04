@@ -5,7 +5,11 @@ Low level calls to the AS3 interface. LuaToAS3Sugar wraps these functions: as3.n
 ===as3.flyield()===
 Release control to Flash and return to this point on the next timer tick. This currently doesn't allow UI updates, but does prevent the script from timing out over long operations. 
 
+Returns true if in async mode, nil and error message otherwise.
+
 *Note:* this function is not related to Lua coroutines.
+
+*Note:* this function works only inside async calls (doFileAsync() and doStringAsync()).
 
 Example
 {{{
