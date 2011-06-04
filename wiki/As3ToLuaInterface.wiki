@@ -54,7 +54,7 @@ Set a global Lua variable with the key/value pair.  The value is converted to a 
 @param value The global value
 
 == !LuaAlchemy#supplyFile(name:String, data:!ByteArray):void ==
-Supply a ByteArray as a file in Lua
+Supply a !ByteArray as a file in Lua
 
 @param name The name of the file within Lua
 
