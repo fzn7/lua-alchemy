@@ -1,4 +1,3 @@
-#labels Featured
 = Setup flexSDK on Windows =
 Information from:
 * http://opensource.adobe.com/wiki/display/flexsdk/Setup+on+Windows
