@@ -30,4 +30,8 @@ $ make
 
   * Ensure that you have run alc-on, and did not run it twice. 
   * Open a fresh terminal and build from there if strange build issues arise.
+  * If you experience ant errors, try adding this line to your ~/.bashrc (don't forget to re-open your terminal session afterwards):
+{{{
+export ANT_OPTS="-Xms768m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m"
+}}}
   * On Windows, make sure that your user name does contain only Latin characters.
