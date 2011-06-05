@@ -1,3 +1,21 @@
 #summary Building Lua Alchemy
+#labels Phase-Deploy,Featured
 
-TODO
+Note that you do not need to build Lua Alchemy to use it — you may just get a pre-build SWC from [http://code.google.com/p/lua-alchemy/downloads/list Downloads].
+
+But if you want to contribute something or just to play around with sources, you'll have to be able to build Lua Alchemy from scratch.
+
+To be able to do this, you'll need:
+
+  * make
+  * ant
+  * Recent Adobe Flex SDK: http://opensource.adobe.com/wiki/display/flexsdk/Setup
+  * Recent Adobe Alchemy SDK: http://labs.adobe.com/wiki/index.php/Alchemy:Documentation:Getting_Started
+
+Toolchain installation on Windows is described here: SetupFlexSdkAlchemyOnWindows. On other platforms (Linux and OS X) it is pretty straightforward.
+
+===Troubleshooting===
+
+  * Ensure that you have run alc-on, and did not run it twice. 
+  * Open a fresh terminal and build from there if strange build issues arise.
+  * On Windows, make sure that your user name does contain only Latin characters.
