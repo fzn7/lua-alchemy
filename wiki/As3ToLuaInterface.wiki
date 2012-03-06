@@ -58,8 +58,6 @@ if the string is successfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
 Note at this time you can only run AutoAssets files.
 
-Deprecated since v0.3. Use doFileAsync() instead.
-
 @param strFileName The name of file to run.
 
 @return The Lua return call stack.
@@ -70,9 +68,18 @@ the results of the call.  The first return value is true/false based on
 if the string is sucessfully run.  If sucessful, the remaining values
 are the Lua return values.  If failed, the second value is the error.
 
-Deprecated since v0.3. Use doStringAsync() instead.
-
 @param strValue The string to run.
+
+@return The Lua return call stack.
+
+== !LuaAlchemy#callGlobal(key:String, ... args):Array (since v0.3.1) ==
+Synchronously call a global Lua function.
+
+Arguments are converted to native Lua types if possible.
+
+@param key The name of a function to call
+
+@param args Arguments to be passed to the function.
 
 @return The Lua return call stack.
 
