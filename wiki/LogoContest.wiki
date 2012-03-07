@@ -1,9 +1,9 @@
 #summary Help Lua Alchemy with a new logo
 #labels Featured
 
-##Lua Alchemy is looking for a logo!
+==Lua Alchemy is looking for a logo!==
 
-#Brief
+===Brief===
 
 See here for the Lua Alchemy project description: http://code.google.com/p/lua-alchemy/
 
