@@ -44,7 +44,7 @@ local v = as3.new("String")
 as3.release(v) 
 }}}
 
-*Note:* This is done automatically by !LuaAlchemy when the variable falls out of scope.
+*Note:* You do not have to call this function manually — any object will eventually be garbage-collected by Lua and released. But if you want to release memory _now_, call it.
 
 ===as3.tolua(this, ...)===
 Convert !ActionScript value to a Lua type if possible (see push_as3_to_lua_stack). Supports multiple arguments. If conversion is not possible, this will return the original AS object. If argument is a Lua value, it is returned intact.
